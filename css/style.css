@@ -719,14 +719,8 @@ footer {
 	flex-wrap: wrap;
 }
 
-.social-panel {
-	padding: 30px 24px;
-	border: 1px solid rgba(255, 255, 255, 0.24);
-	border-radius: 20px;
-	background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
-	box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-	-webkit-backdrop-filter: blur(8px);
-	backdrop-filter: blur(8px);
+.social-content {
+	padding: 14px 8px;
 }
 
 .social-title {
@@ -735,12 +729,48 @@ footer {
 	text-transform: uppercase;
 }
 
-.social-panel .footer-p {
+.social-content .footer-p {
 	text-align: center;
 	line-height: 1.7;
 	max-width: 420px;
 	margin: 14px auto 0;
 	opacity: 0.95;
+}
+
+.footer-wordmark-wrap {
+	margin-top: 18px;
+	height: clamp(80px, 10vw, 160px);
+	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+}
+
+.footer-wordmark {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: clamp(4.6rem, 14vw, 12rem);
+	line-height: 0.84;
+	font-weight: 900;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.55);
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.3));
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.3));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: 0.02em;
+	margin: 0;
+	text-transform: capitalize;
+	text-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+	overflow-wrap: anywhere;
+	-webkit-transform: translateY(26%);
+	transform: translateY(26%);
 }
 
 .footer-h2,
@@ -1524,8 +1554,8 @@ a.fa-linkedin {
 		text-align: center;
 	}
 
-	.social-panel {
-		padding: 24px 16px;
+	.social-content {
+		padding: 12px 6px;
 	}
 
 	.social-media {
@@ -1537,6 +1567,30 @@ a.fa-linkedin {
 		height: 48px;
 		font-size: 20px;
 		border-radius: 14px;
+	}
+
+	.footer-wordmark-wrap {
+		height: clamp(64px, 18vw, 110px);
+		margin-top: 10px;
+	}
+
+	.footer-wordmark {
+		font-size: clamp(3.2rem, 20vw, 6.2rem);
+		-webkit-transform: translateY(24%);
+		transform: translateY(24%);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.footer-wordmark-wrap {
+		height: clamp(54px, 20vw, 90px);
+	}
+
+	.footer-wordmark {
+		font-size: clamp(2.6rem, 18vw, 4.6rem);
+		letter-spacing: 0.01em;
+		-webkit-transform: translateY(22%);
+		transform: translateY(22%);
 	}
 }
 @media only screen and (max-width: 770px) {

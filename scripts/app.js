@@ -95,7 +95,7 @@ let footer = $(`
 	</div>
 	<div class="col-lg-6 col-md-8 mb-5" id="footer-c">		
 	  <br>
-	  <div class="social-panel">
+	  <div class="social-content">
 		<h3 class="footer-h social-title">Connect With Us</h3>
 		<div class="border"></div>
 		<p class="footer-p">Follow our social media for updates, stories, and community highlights.</p>
@@ -107,9 +107,9 @@ let footer = $(`
 	  </div>
 	</div>
   </div>
-   <center>
-		  <h6 class="footer-h3">Made with <i class="fa fa-heart" style="color:red;"></i></h6>
-	</center>
+	<div class="footer-wordmark-wrap">
+		<h1 class="footer-wordmark">Mindspark</h1>
+	</div>
 </div>		
 </footer>
 <a onclick="topBtnClick()" class="gotopbtn clr-wt" id="topBtn"> <i class="fa fa-chevron-up clr-wt"></i> </a>
