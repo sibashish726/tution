@@ -42,23 +42,22 @@ const trendCardsDetails = [
 const initiativesDetails = [
 	{
 		mainHeading: 'Teaching',
-		subHeading: 'Students',
-		description: `Our vision is to be the source for childhood learning on the internet available from anywhere and without charge. 
-		             .`,
+		subHeading: 'Support',
+		description: `We provide structured teaching support for students through easy-to-understand lessons, regular practice, and doubt-clearing sessions that build strong fundamentals.`,
 		classFix: '',
 		svg: openSourceSvg
 	},
 	{
-		mainHeading: 'Seminars',
-		subHeading: 'Work',
-		description: `Learning has to be fun! E-Learning for kids integrates gaming and learning to make our courseware more effective"`,
+		mainHeading: 'Workshops',
+		subHeading: 'Seminars',
+		description: `Interactive workshops and seminars help students explore real-world topics, ask questions freely, and learn practical skills from mentors and guest speakers.`,
 		classFix: '',
 		svg: researchWorkSvg
 	},
 	{
-		mainHeading: 'Free Food',
-		subHeading: 'Food',
-		description: `Nowadays, a vast amount of foods are free-from. Products such as bread, milk and pasta all have free-from varieties.`,
+		mainHeading: 'One-to-One',
+		subHeading: 'Sessions',
+		description: `Personalized one-to-one sessions help learners focus on their goals, clear doubts faster, and build confidence through guided practice and regular feedback.`,
 		classFix: 'fix-touch',
 		svg: publicSpeakingSvg
 	},
