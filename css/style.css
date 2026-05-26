@@ -240,7 +240,7 @@ Nav bar
 }
 
 #logo {
-	width: 150px !important;
+	width: 100px !important;
 	-webkit-transition: 0.4s !important;
 	-o-transition: 0.4s !important;
 	transition: 0.4s !important;
