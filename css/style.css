@@ -1679,6 +1679,8 @@ input:checked + .slider:before {
 	color: var(--theme-color) !important;
 	text-transform: uppercase;
 	font-size: 4.5rem;
+	font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
 }
 .sp-container h2.frame-1 {
 	-webkit-animation-delay: 0s;
