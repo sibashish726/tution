@@ -91,74 +91,29 @@ let footer = $(`
 <div class="container">
   <div class="row">
 	<div class="col-lg-6 col-md-4 footer-logo"> 
-		<img data-src="assets/Images/logo/logo.png" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" style="height:300px; width:300px">
+		<img data-src="assets/Images/logo/logoF.png" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" style="height:300px; width:300px">
 	</div>
 	<div class="col-lg-6 col-md-8 mb-5" id="footer-c">		
-	  <br> 
-	  <h3 class="footer-h">Join Our Newsletter</h3>
-	  <div class="border"></div>
-	  <p class="footer-p">Enter Your Email to get our news and updates.</p>
-	  <form class="newsletter-form" for="email"  onsubmit="subscribeToNewsletter(event)">
-	  <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" class="txtb mr-2 mb-2 mt-4" placeholder="Enter Your Email" required >		   
-	  <button class="btn btn-spl" type="submit">Send</button>
-	  </form>
-	  <p class="success-message hide" id="success-message">Thank you for subscribing</p>
+	  <br>
+	  <div class="social-panel">
+		<h3 class="footer-h social-title">Connect With Us</h3>
+		<div class="border"></div>
+		<p class="footer-p">Follow our social media for updates, stories, and community highlights.</p>
+		<div class="social-media" role="list" aria-label="Social media links">
+		  <a class="fa fa-twitter" href="#" aria-label="Twitter"></a>
+		  <a class="fa fa-instagram" href="#" aria-label="Instagram"></a>
+		  <a class="fa fa-linkedin" href="#" aria-label="LinkedIn"></a>
+		</div>
+	  </div>
 	</div>
   </div>
    <center>
-
-		<div class="social-media">
-		  <a class="fa fa-twitter"  href="#"></a>
-		  <a class="fa fa-instagram" href="#"></a>
-		  <a class="fa fa-linkedin" href="#"></a>
-		</div>
 		  <h6 class="footer-h3">Made with <i class="fa fa-heart" style="color:red;"></i></h6>
 	</center>
 </div>		
 </footer>
 <a onclick="topBtnClick()" class="gotopbtn clr-wt" id="topBtn"> <i class="fa fa-chevron-up clr-wt"></i> </a>
 `);
-
-const subscribeToNewsletter = event => {
-	event.preventDefault();
-	const userEmail = document.getElementById('email').value;
-	axios
-		.post('#', {
-			email: userEmail
-		})
-		.then(function (response) {
-			const status = response.data.status;
-
-			if (status === 'success') {
-				const successMessage = document.getElementById('success-message');
-				if (successMessage) {
-					successMessage.classList.remove('hide');
-					setTimeout(() => {
-						successMessage.classList.remove('hide');
-						location.reload();
-					}, 1200);
-				}
-			}
-			document.getElementById('email').value = '';
-		})
-		.catch(function (error) {
-			const successMessage = document.getElementById('success-message');
-			if (successMessage) {
-				successMessage.classList.remove('hide');
-				if (error.response.data.message === 'The user is already subscribed') {
-					successMessage.innerHTML = 'You are already subscribed ❤️';
-				} else {
-					successMessage.innerHTML = 'Something is wrong. Try again later!';
-				}
-				setTimeout(() => {
-					successMessage.remove();
-					location.reload();
-				}, 1200);
-			}
-
-			document.getElementById('email').value = '';
-		});
-};
 
 let goToTopbutton = $(`#topBtn`);
 
