@@ -96,9 +96,11 @@ let footer = $(`
 	<div class="col-lg-6 col-md-8 mb-5" id="footer-c">		
 	  <br>
 	  <div class="social-content">
-		<h3 class="footer-h social-title">Connect With Us</h3>
-		<div class="border"></div>
-		<p class="footer-p">Follow our social media for updates, stories, and community highlights.</p>
+		<div class="social-copy">
+			<h3 class="footer-h social-title">Connect With Us</h3>
+			<div class="border"></div>
+			<p class="footer-p">Follow our social media for updates, stories, and community highlights.</p>
+		</div>
 		<div class="social-media" role="list" aria-label="Social media links">
 		  <a class="fa fa-twitter" href="#" aria-label="Twitter"></a>
 		  <a class="fa fa-instagram" href="#" aria-label="Instagram"></a>
