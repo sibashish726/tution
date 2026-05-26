@@ -1,161 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindspark</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1>Welcome to Our Coaching Center</h1>
-            <p>We're revolutionizing the way you do things. Let's do some smart work.</p>
-            
-        </div>
-    </header>
+<html lang="en" data-theme="light">
+	<head>
+		<title>Charity</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 
-    <main>
-        <section id="about-us">
-            <div class="container">
-                <h2>About Us</h2>
-                <p>Tutoring Services: Coaching centers typically offer one-on-one or group tutoring sessions to help students improve their understanding of various subjects. These sessions may focus on specific topics or provide general academic support.</p>
-                <p>Academic Counseling: Coaching centers may offer academic counseling services to help students identify their strengths and weaknesses, set academic goals, and create personalized study plans. This can be particularly helpful for students who are struggling academically or need guidance in choosing a career path.</p>
-                <p>Skill Development Programs: Some coaching centers offer programs aimed at developing specific skills such as critical thinking, problem-solving, time management, and communication skills. These programs can be beneficial for students seeking to enhance their overall academic performance and prepare for future challenges.</p>
-                <img src="Examination-for-Design.jpg" alt="Examination for Design">
-            </div>
-        </section>
 
-        <section id="services">
-            <div class="container">
-                <h2>Our Faculty</h2>
-                <div class="services-container">
-                   <!-- <div class="service">
-                        <h3>Er. Rituparna Bhattacharjee</h3>
-                        <h4>Qualification: B.tech, M.tech (NIT Agartala)</h4>
-                        <h5>Offered Subjects</h5>
-                        <ul class="offered-subjects">
-                            <li>Science and Math (VIII-X)</li>
-                            <li>Analog Circuit</li>
-                            <li>Electronic Drives</li>
-                            <li>Digital Circuit</li>
-                            <li>Signal and System Communication</li>
-                            <li>EM Theory</li>
-                        </ul>
-                    </div>-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,900;1,700&display=swap" rel="stylesheet">
+	
+		<link
+			href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600,700,800,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.5.0.min.js"
+			integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
 
-                    <div class="service">
-                        <h3>Er. Sanghita Chakraborty</h3>
-                        <h4>Qualification: B.tech, M.tech</h4>
-                        <h5>Offered Subjects</h5>
-                        <ul class="offered-subjects">
-                            <li>Control System</li>
-                            <li>EMT</li>
-                            <li>Control System 2</li>
-                            <li>Power System 2</li>
-                            <li>Electrical Measurement</li>
-                            <li>Signal and System</li>
-                            <li>Industrial Process Control</li>
-                        </ul>
-                    </div>
+	
+		<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+		<link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
 
-                    <div class="service">
-                        <h3>Er. Sagar Malik</h3>
-                        <h4>Qualification: B.tech, M.tech, Ph.D (Pursuing, NIT Agartala)</h4>
-                        <h5>Offered Subjects</h5>
-                        <ul class="offered-subjects">
-                            <li>XI-XII Physics</li>
-                            <li>Diploma BTech EE&EIE</li>
-                            <li>Basic Electrical</li>
-                            <li>Engineering Mechanics</li>
-                            <li>Thermodynamics</li>
-                            <li>Network Theorem</li>
-                            <li>Electrical Machines 1&2</li>
-                            <li>Power System 1</li>
-                            <li>Power Electronics</li>
-                            <li>Electrical Drives</li>
-                            <li>Renewable Energy</li>
-                        </ul>
-                    </div>
+		<script>
+			document.getElementsByTagName('html')[0].className += ' Q_js'; 
+		</script>
+	</head>
 
-                    <div class="service">
-                        <h3>Nippon Biswas</h3>
-                        <h4>Qualification: B.Sc, M.Sc (Math), Gate Cracked (2024)</h4>
-                        <h5>Offered Subjects</h5>
-                        <ul class="offered-subjects">
-                            <li>Diploma</li>
-                            <li>Math (XI-XII)</li>
-                            <li>B.tech Math (1,2,3)</li>
-                        </ul>
-                    </div>
+	<body>
+		<div class="loader-box">
+			<div class="hollowLoader">
+				<div class="largeBox"></div>
+				<div class="smallBox"></div>
+			</div>
+		</div>
+		<!-- Header -->
+		<!-- ANIMATION START -->
+		<div class="sp-container">
+			<div class="sp-content">
+				<h2 class="frame-1">Welcome to</h2>
+				<h2 class="frame-2">MindSpark Community</h2>
+				<h2 class="frame-3">
+					<span>We're revolutionizing the way you do things. Let's do some smart work.</span>
+				</h2>
+			</div>
+			<div class="img-front"></div>
+		</div>
+		<!-- ANIMATION END -->
 
-                    <div class="service">
-                        <h3>Anirban Sutradhar</h3>
-                        <h4>Qualification: B.tech</h4>
-                        <h5>Offered Subjects</h5>
-                        <ul class="offered-subjects">
-                            <li>VI-VIII Science</li>
-                            <li>Web-designing</li>
-                            <li>Stenography</li>
-                        </ul>
-                    </div>
+		<section class="newsection bg-lgt-grey pb-5 pb-5" id="aboutSection">
+			<div class="container p-3 myDiv">
+				<h2 class="pt-4 text-center fw-bold heading about-head" style="font-family: 'Titillium Web', sans-serif;">
+					ABOUT <span class="clr-theme fw-400">CHARITY</span>
+				</h2>
+				<div class="row forScroll">
+					<div class="col-lg-9 col-md-8 col-sm-12 mt-5 dark-mode spacing">
+						<p class="mt-2 mb-3 fs-17px text-justify about-para">
+							<b>Charity </b> We are Global Non-profit NGO to help peoples
+							To make a better World! <br /><br />
+							<span class="italic">According to the research firm Frost & Sullivan, the estimated size of the North American used test and measurement equipment market was $446.4 million in 2004 and is estimated to grow to $654.5 million by 2011. For over 50 years, companies and governments have procured used test and measurement instruments..</span><br />
+							<br />We’ve funded 42,113 water projects for 9.6 million people around the world. <br /><br /><b>Goals</b>:
+						</p>
 
-                </div>
-            </div>
-        </section>
+						<ul style="padding-left: 15px;">
+							<li>
+								Inspires employees and organizations to support causes they care, We dois to bring more resources to the nonprofits that are our world.
+							</li>
+							<li>Empower people by providing an opportunity to showcase their technical skills.</li>
+							<li>Provide a platform to individuals by hosting coding competition and tech events.</li>
+							<li>
+								Share technical knowledge and content for helping individuals in the programming world.
+							</li>
+						</ul>
 
-        <section id="reach-us">
-            <div class="container">
-                <h2>Reach Us</h2>
-                <p>Find our location on the map:</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4511.426720737412!2d91.2688990746691!3d23.806735979378303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f50061d155a5%3A0x1ccb2f71c55b55d6!2sMindSpark!5e0!3m2!1sen!2sin!4v1719245521389!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <a href="https://maps.app.goo.gl/ezqaz9htddbziwKe6?g_st=aw" class="map-button" target="_blank">Open in Google Maps</a>
-            </div>
-        </section>
+						<br />
+						<p class="about-para">
+							<a href="#" class="clr-theme fw-bold">Charity</a> is India's fastest growing non-profit
+							community at the heart of Agartala. 
+						</p>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-12 text-center">
+						<img
+							src="assets/Images/logo/logo_for_boilerplate_1.png"
+							class="mt-5 ml-2 img-logo"
+							alt="Logo"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <div class="contact-info">
-                    <p>Tap here to call Sagar Mallik</p>
-                    <a href="tel:9089174688" class="phone">
-                       <i class="fas fa-phone-alt"></i>
-                    </a>
-                    <p>Tap here to call Nippon Biswas</p>
-                    <a href="tel:9402381074" class="phone">
-                         <i class="fas fa-phone-alt"></i>
-                    </a>
-                    <p>Tap here to redirect to Sagar's WhatsApp</p>
-                    <a href="https://wa.me/+919089174688" class="whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                <p>Tap here to redirect to Nippon's WhatsApp</p>
-                <a href="https://wa.me/+919402381074" class="whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <p>Tap here to email us</p>
-                <a href="mailto:mindspark24.edu@gmail.com" class="email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                </div>
-            </div>
-        </section>
+		<div>
+			<div class="parallax1">
+				<div class="parashadow"></div>
+			</div>
+		</div>
+		<section class="newsection p-5" id="initiativesSection">
+			<h2 class="pt-2 pb-5 text-center fw-bold heading" style="font-family: 'Titillium Web', sans-serif;">
+				OUR <span class="clr-theme fw-100">INITIATIVES</span>
+			</h2>
 
-        <section id="web-designer">
-            <div class="container">
-                <h2>Reach the Web Developer and Our Latest Sponsorship</h2>
-                <p>Click these icons to meet the designer:</p>
-                <a href="web.html" class="web-button" target="_blank">Click here for web developer</a>
-                <a href="sponsorship.html" class="web-button" target="_blank">Click here to check sponsorship</a>
-            </div>
-        </section>
-    </main>
+			<div class="initiatives-cards forScrollCards">
+				<div class="upper" id="initiatives-upper">
+					<!-- Will be inserted dynamically -->
+				</div>
 
-    
+				<div class="lower" id="initiatives-lower">
+					<!-- will be inserted dynamically -->
+				</div>
+			</div>
+		</section>
 
-</body>
+		<div>
+			<div class="parallax1">
+				<div class="parashadow"></div>
+			</div>
+		</div>
+
+		<section class="pt-5 pb-5 newsection bg-lgt-grey" id="achievementsSection">
+			<div class="container myDiv1">
+				<canvas id="my-canvas"></canvas>
+				<h2 class="pt-5 pb-5 text-center fw-bold heading" style="font-family: 'Titillium Web', sans-serif;">
+					OUR <span class="clr-theme fw-100">ACHIEVEMENTS</span>
+				</h2>
+				<div class="row for-Scroll-Achievements">
+					<div class="col-lg-5">
+						<h3 class="text-center p-4 pb-4 achieve-content">Our Achievements Speak For Themselves</h3>
+						<a href="achievements.html" class="center-btn-settings btn btn-lg mt-2">Read More</a>
+
+						<br />
+					</div>
+					<div class="col-lg-1"></div>
+					<div class="col-lg-6 pt-3">
+						<div class="counter-item">
+							<div class="ci-number count">
+								100+
+							</div>
+							<div class="ci-text">
+								<h4>CHILDRENS</h4>
+								<p class="dark-mode">
+									There are many innovative projects which are a part of CHARITY and many students
+									are contributing towards it with full enthusiasm.
+								</p>
+							</div>
+						</div>
+						<div class="counter-item">
+							<div class="ci-number count">
+								60+
+							</div>
+							<div class="ci-text">
+								<h4>VOLUNTEERS</h4>
+								<p class="dark-mode">
+									Many interactive and online events happens time to time in order to connect better
+									with people.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div>
+			<div class="parallax1">
+				<div class="parashadow"></div>
+			</div>
+		</div>
+
+		<section class="newsection p-5" id="newsSection">
+			<h2 class="pt-5 pb-2 text-center fw-bold heading" style="font-family: 'Titillium Web', sans-serif;">
+				WE CREATE TRENDS <span class="clr-theme fw-100">FOR THE WORLD </span>
+			</h2>
+			<h3 class="mb-5 text-center join-us">Join us and get a chance to learn</h3>
+
+			<div class="feature-cards scroll-feature-cards" id="trends-top">
+			</div>
+
+			<div class="feature-cards scroll-feature-cards" id="trends-bottom">
+			</div>
+
+			<a href="contactUs.html" class="center-btn-settings btn btn-lg mt-5">Get In Touch</a>
+		</section>
+
+		<script src="./scripts/app.js"></script>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164715490-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'UA-164715490-1');
+		</script>
+
+		<script type="module" src="./scripts/svg.js"></script>
+		<script type="module" src="./scripts/index.js"></script>
+		<script defer src="./scripts/confetti.min.js"></script>
+		<script src="./scripts/cacheImages.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</body>
 </html>
