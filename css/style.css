@@ -117,7 +117,7 @@ p {
 }
 
 img {
-	max-width: 100%;
+	max-width: 50%;
 }
 
 input:focus,
@@ -240,7 +240,7 @@ Nav bar
 }
 
 #logo {
-	width: 100px !important;
+	width: 150px !important;
 	-webkit-transition: 0.4s !important;
 	-o-transition: 0.4s !important;
 	transition: 0.4s !important;
