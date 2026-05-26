@@ -239,12 +239,40 @@ Nav bar
 	letter-spacing: 1px;
 }
 
+#navbar .navbar-brand {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	max-height: 74px;
+	overflow: hidden;
+	margin-right: 0.6rem;
+}
+
 #logo {
-	width: 100px !important;
+	width: 160px !important;
+	height: auto !important;
+	max-width: 42vw;
+	max-height: 72px;
+	object-fit: contain;
+	display: block;
 	-webkit-transition: 0.4s !important;
 	-o-transition: 0.4s !important;
 	transition: 0.4s !important;
 	content: var(--logo-image) !important;
+}
+
+@media only screen and (max-width: 768px) {
+	#navbar .navbar-brand {
+		max-height: 62px;
+	}
+
+	#logo {
+		width: 130px !important;
+		max-height: 58px;
+	}
 }
 
 .navbar-toggler-icon {
