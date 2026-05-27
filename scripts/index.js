@@ -133,6 +133,5 @@ const injectInitiavesCards = () => {
 	});
 }
 
-injectInitiavesCards();
 injectTrendsCards();
 
