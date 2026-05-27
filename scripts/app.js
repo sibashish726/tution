@@ -10,8 +10,7 @@ let header = $(`
           <a href="team.html">OUR TEAM</a>
 		  <a href="blogs.html">BLOGS</a>
 		  <a href="contactUs.html">CONTACT US</a>
-		  <div id="themeChangeButtonSmallScreen">
-		  </div>
+		  <a href="contactUs.html" class="nav-cta-mobile">Get started</a>
         </div>
   </div>
 
@@ -32,12 +31,8 @@ let header = $(`
 		</li>
 
 	  </ul>
-	<div id="themeChangeButtonBigScreen">
-		<label class="switch" id="themeChangeButton">		
-		<input type="checkbox" name="theme" id="theme" onchange="changeTheme()">		
-		<span class="slider round"></span>	
-		<div class="stars"><span></span><span></span><span></span><span></span><span></span></div>
-		</label>
+	<div class="header-actions">
+		<a href="contactUs.html" class="nav-cta">Get started</a>
 	</div>				
 	 </div>	 
 	</nav>`);
@@ -172,12 +167,16 @@ function changeTheme(value) {
 	window.setTimeout(() => {
 		docElement.classList.remove('transition');
 	}, 1000);
-	if (value === 'dark' || checkElement.checked == true) {
-		checkElement.checked = true;
+	if (value === 'dark' || (checkElement && checkElement.checked == true)) {
+		if (checkElement) {
+			checkElement.checked = true;
+		}
 		docElement.setAttribute('data-theme', 'dark');
 		sessionStorage.setItem('mode', 'dark');
 	} else {
-		checkElement.checked = false;
+		if (checkElement) {
+			checkElement.checked = false;
+		}
 		docElement.setAttribute('data-theme', 'light');
 		sessionStorage.setItem('mode', 'light');
 	}
@@ -207,18 +206,10 @@ window.onscroll = function () {
 
 function openNav() {
 	document.getElementById('myNav').style.display = 'block';
-	let toggleThemeButton = document.getElementById('themeChangeButton');
-	toggleThemeButton.remove();
-	let positionOfToggleButtonForSmallScreen = document.getElementById('themeChangeButtonSmallScreen');
-	positionOfToggleButtonForSmallScreen.appendChild(toggleThemeButton);
 }
 
 function closeNav() {
 	document.getElementById('myNav').style.display = 'none';
-	let toggleThemeButton = document.getElementById('themeChangeButton');
-	toggleThemeButton.remove();
-	let positionOfToggleButtonForBigScreen = document.getElementById('themeChangeButtonBigScreen');
-	positionOfToggleButtonForBigScreen.appendChild(toggleThemeButton);
 }
 
 function topBtnClick() {
