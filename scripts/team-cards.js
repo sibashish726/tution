@@ -1,10 +1,11 @@
 'use strict';
 
 const favClassesDataSet = {
-  linkedIn: 'fa fa-linkedin',
-  twitter: 'fa fa-twitter',
-  github: 'fa fa-github',
-  facebook: 'fa fa-facebook'
+	linkedIn: 'fa fa-linkedin',
+	twitter: 'fa fa-twitter',
+	github: 'fa fa-github',
+	facebook: 'fa fa-facebook',
+	website: 'fa fa-globe'
 };
 
 const mapProfileLinksToFavClasses = profileName => {
@@ -24,7 +25,6 @@ const teamDetails = [
 			}
 		]
 	},
-
 	{
 		name: 'SHIVAM KUMAR',
 		position: 'The Board',
@@ -37,7 +37,6 @@ const teamDetails = [
 			}
 		]
 	},
-
 	{
 		name: 'SHIVAM KUMAR',
 		position: 'The Board',
@@ -50,7 +49,6 @@ const teamDetails = [
 			}
 		]
 	},
-
 	{
 		name: 'SHIVAM KUMAR',
 		position: 'The Board',
@@ -63,108 +61,28 @@ const teamDetails = [
 			}
 		]
 	},
-
 	{
-		name: 'SHIVAM KUMAR',
+		name: 'Sibashish Biswas',
 		position: 'Technical Team',
 		image: 'default_member.png',
 		profiles: [
 			{
-				linkedIn: '#',
-				github: '#',
-				
+				linkedIn: 'https://www.linkedin.com/in/sibashish-biswas/',
+				github: 'https://github.com/sibashish99',
+				website: 'https://sibashish99.github.io/'
 			}
 		]
 	},
-
 	{
 		name: 'SHIVAM KUMAR',
-		position: 'Technical Team',
+		position: 'Creatives Team',
 		image: 'default_member.png',
 		profiles: [
 			{
 				linkedIn: '#',
-				github: '#',
+				github: '#'
 			}
-		]		
-		
-	},
-
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'Technical Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-			}
-		]		
-		
-	},
-
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'Technical Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-			}
-		]		
-		
-	},
-
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'Technical Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-			}
-		]	
-		
-	},
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'Technical Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-			}
-		]	
-		
-	},
-
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'Technical Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-			}
-		]	
-		
-	},
-
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'Technical Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-			}
-		]	
-		
+		]
 	},
 	{
 		name: 'SHIVAM KUMAR',
@@ -173,10 +91,9 @@ const teamDetails = [
 		profiles: [
 			{
 				linkedIn: '#',
-				github: '#',
+				github: '#'
 			}
-		]	
-		
+		]
 	},
 	{
 		name: 'SHIVAM KUMAR',
@@ -185,22 +102,9 @@ const teamDetails = [
 		profiles: [
 			{
 				linkedIn: '#',
-				github: '#',
+				github: '#'
 			}
-		]	
-		
-	},
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'Creatives Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-			}
-		]	
-		
+		]
 	},
 	{
 		name: 'SHIVAM KUMAR',
@@ -209,11 +113,10 @@ const teamDetails = [
 		profiles: [
 			{
 				linkedIn: '#',
-				github: '#',
+				github: '#'
 			}
-		]	
+		]
 	},
-
 	{
 		name: 'SHIVAM KUMAR',
 		position: 'Management Team',
@@ -221,11 +124,10 @@ const teamDetails = [
 		profiles: [
 			{
 				linkedIn: '#',
-				github: '#',
+				github: '#'
 			}
-		]	
+		]
 	},
-
 	{
 		name: 'SHIVAM KUMAR',
 		position: 'Management Team',
@@ -233,11 +135,10 @@ const teamDetails = [
 		profiles: [
 			{
 				linkedIn: '#',
-				github: '#',
+				github: '#'
 			}
-		]	
+		]
 	},
-
 	{
 		name: 'SHIVAM KUMAR',
 		position: 'Management Team',
@@ -245,9 +146,9 @@ const teamDetails = [
 		profiles: [
 			{
 				linkedIn: '#',
-				github: '#',
+				github: '#'
 			}
-		]	
+		]
 	}
 ];
 
@@ -256,12 +157,31 @@ const generateProfileLinks = profileObject => {
 	for (let profile in profileObject) {
 		const classtoAdd = mapProfileLinksToFavClasses(profile);
 		const listItem = `
-              <a href="${profileObject[profile]}" target="__blank">
+							<a href="${profileObject[profile]}" target="_blank">
                 <i class="${classtoAdd}"></i>
               </a>`;
 		result.push(listItem);
 	}
 	return result.join(' ');
+};
+
+const toTagLabel = socialKey => {
+	const mappingSet = {
+		linkedIn: 'Network',
+		twitter: 'Engaging',
+		github: 'Technical',
+		facebook: 'Community',
+		website: 'Portfolio'
+	};
+
+	return mappingSet[socialKey] || 'Team';
+};
+
+const generateTagPills = profileObject => {
+	return Object.keys(profileObject)
+		.slice(0, 2)
+		.map(profileName => `<span class="team-tag">${toTagLabel(profileName)}</span>`)
+		.join(' ');
 };
 
 const mapPositionToHtmlId = position => {
@@ -280,15 +200,14 @@ const generateCards = cardDetail => {
 	const { name, position, image, profiles } = cardDetail;
 
 	const getProfilesLinksDynamic = generateProfileLinks(profiles[0]);
+	const tagsHtml = generateTagPills(profiles[0]);
 
 	const teamCard = `
   <card data-image="./assets/Images/team/${image}">
-    <h1 slot="header">${name}</h1>
-    <p slot="content">
-        ${getProfilesLinksDynamic}
-        <br><br>
-        <span>${position}</span>
-    </p>
+		<span slot="header">${name}</span>
+		<span slot="role">${position}</span>
+		<span slot="tags">${tagsHtml}</span>
+		<span slot="content">${getProfilesLinksDynamic}</span>
   </card>`;
 
 	const mappingID = position.replace(' ', '_');

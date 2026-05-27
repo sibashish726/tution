@@ -51,7 +51,7 @@
 
 		<section class="blogs-section">
 			<div class="mb-3 p-sm-6 container width2" id="blogid">
-				<h3 class="pt-5 pb-5 font-weight-bold heading-blog" style="font-family: 'Titillium Web', sans-serif;">Recent <span> Blogs </span></h3>
+				<!-- <h3 class="pt-5 pb-5 font-weight-bold heading-blog" style="font-family: 'Titillium Web', sans-serif;">Recent <span> Blogs </span></h3> -->
 				<div
 					id="retainable-rss-embed"
 					data-rss="https://medium.com/feed/techequilla"
@@ -62,6 +62,23 @@
 					data-buttonclass="btn blog-btn p-3o"
 					data-offset="-100"
 				></div>
+			</div>
+		</section>
+
+		<section class="google-reviews-section">
+			<div class="container width2" id="reviewsid">
+				<div class="google-reviews-label-box">Google Reviews</div>
+				<div class="google-reviews-summary" id="googleReviewsSummary"></div>
+			</div>
+		</section>
+
+		<section class="all-reviews-section">
+			<div class="container width2" id="allReviewsContainer">
+				<div class="google-reviews-list-box">
+					<h4 class="google-reviews-list-title">All reviews</h4>
+					<div class="google-reviews-state" id="googleReviewsState">Loading reviews...</div>
+					<div class="google-reviews-grid" id="googleReviewsList"></div>
+				</div>
 			</div>
 		</section>
 		<!-- Footer -->
@@ -80,6 +97,15 @@
 
 		<!--External JS File-->
 		<script src="./scripts/app.js"></script>
+		<script>
+			window.MINDSPARK_GOOGLE_REVIEWS = {
+				apiKey: 'AIzaSyAXDXbduLjnWG2aFls7C07TunvQh4H8Gvs',
+				placeId: '0x3753f50061d155a5:0x1ccb2f71c55b55d6',
+				mapsUrl:
+					'https://www.google.com/maps/place/MindSpark/@23.8243162,91.2678078,17z/data=!4m8!3m7!1s0x3753f50061d155a5:0x1ccb2f71c55b55d6!8m2!3d23.8243162!4d91.2703827!9m1!1b1!16s%2Fg%2F11w3lrpyk1?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D'
+			};
+		</script>
+		<script src="./scripts/google-reviews.js"></script>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164715490-1"></script>

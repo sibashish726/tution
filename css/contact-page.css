@@ -7,6 +7,11 @@ html {
 	--contactForm-opacity: 0.989;
 	--form-bg: #fff;
 	--padding-placeholder: 2px 0 0 8px;
+	--ig-1: #f58529;
+	--ig-2: #feda77;
+	--ig-3: #dd2a7b;
+	--ig-4: #8134af;
+	--ig-5: #515bd4;
 }
 
 html[data-theme='dark'] {
@@ -20,42 +25,16 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.waves{		
-	background-size: cover;	
-	background-image: -webkit-gradient(	
-			linear,	
-			left top,	
-			right bottom,	
-			from(rgba(0, 0, 0, 0.849)),	
-			to(rgba(0, 0, 0, 0.808))	
-		),	
-		url('../assets/Images/contact/contact.png');	
-	background-image: -o-linear-gradient(top left, rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.808)),	
-		url('../assets/Images/contact/contact.png');	
-	background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.808)),	
-		url('../assets/Images/contact/contact.png');
-
+.waves {
+	background: transparent;
 }
 
 .main-section {
-	padding-top: 10%;
+	padding-top: 3.5rem;
 	padding-right:5%;
 	padding-left: 5%;
-	background-position: center;	
-	background-repeat: no-repeat;	
-	background-size: cover;	
-	background-image: -webkit-gradient(	
-			linear,	
-			left top,	
-			right bottom,	
-			from(rgba(0, 0, 0, 0.849)),	
-			to(rgba(0, 0, 0, 0.808))	
-		),	
-		url('../assets/Images/contact/contact.png');	
-	background-image: -o-linear-gradient(top left, rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.808)),	
-		url('../assets/Images/contact/contact.png');	
-	background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.808)),	
-		url('../assets/Images/contact/contact.png');	
+	padding-bottom: 2.5rem;
+	background-color: var(--bg1-color);
 }
 
 [data-aos^='fade'][data-aos^='fade'].aos-animate {
@@ -63,7 +42,7 @@ body {
 }
 
 .def-sec {
-	color: #fff;
+	color: var(--font-color);
 	font-weight: 500;
 }
 
@@ -265,10 +244,10 @@ input[type='number'] {
 }
 
 .side-sec {
-	color: white;
+	color: var(--font-color);
 	padding: 0.3rem;
 	font-size: 20px;
-	margin-top: 30px;
+	margin-top: 6px;
 }
 
 .container-contact {
@@ -289,10 +268,18 @@ input[type='number'] {
 	padding: 1rem;
 }
 
+.info-card {
+	background: var(--bg2-color);
+	border: 1px solid rgba(120, 120, 140, 0.15);
+	border-radius: 14px;
+	box-shadow: 0 8px 18px rgba(56, 44, 72, 0.08);
+	margin-bottom: 12px;
+}
+
 .def i {
 	font-size: 27px;
 	padding-right: 5px;
-	color:#fff;
+	color: var(--theme-color);
 }
 
 .def div {
@@ -311,15 +298,16 @@ input[type='number'] {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 0.93rem;
 	letter-spacing: 0.4px;
-	color: #f2f2f2;
+	color: #4b4b57;
 }
 
 .quick-contact-actions .action-link-item {
-	background: rgba(255, 255, 255, 0.06);
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.86);
+	border: 1px solid rgba(120, 120, 140, 0.16);
 	border-radius: 14px;
 	padding: 12px;
 	backdrop-filter: blur(4px);
+	box-shadow: 0 8px 18px rgba(56, 44, 72, 0.08);
 }
 
 .quick-contact-actions .quick-action-btn {
@@ -353,38 +341,38 @@ input[type='number'] {
 }
 
 .quick-contact-actions .phone {
-	background: linear-gradient(135deg, #2c95f7, #1576da);
+	background: linear-gradient(135deg, #515bd4, #8134af);
 	color: #fff;
-	box-shadow: 0 6px 16px rgba(24, 135, 242, 0.35);
+	box-shadow: 0 6px 16px rgba(81, 91, 212, 0.35);
 }
 
 .quick-contact-actions .whatsapp {
-	background: linear-gradient(135deg, #2adb73, #15b454);
+	background: linear-gradient(135deg, #f58529, #dd2a7b);
 	color: #fff;
-	box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+	box-shadow: 0 6px 16px rgba(221, 42, 123, 0.35);
 }
 
 .quick-contact-actions .email {
-	background: linear-gradient(135deg, #ff7966, #e14935);
+	background: linear-gradient(135deg, #feda77, #f58529);
 	color: #fff;
-	box-shadow: 0 6px 16px rgba(242, 93, 75, 0.35);
+	box-shadow: 0 6px 16px rgba(245, 133, 41, 0.35);
 }
 
 .map-panel {
-	margin-top: 38px;
+	margin-top: 8px;
 	margin-left: 24px;
 	padding: 18px;
 	width: min(100%, 720px);
-	background: rgba(10, 10, 15, 0.55);
+	background: rgba(82, 30, 108, 0.34);
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	border-radius: 14px;
 	backdrop-filter: blur(3px);
-	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
+	box-shadow: 0 12px 28px rgba(67, 20, 88, 0.35);
 }
 
 .map-panel h2 {
 	font-family: 'Titillium Web', sans-serif;
-	color: var(--theme-color);
+	color: #ffe9f6;
 	font-size: 2rem;
 	margin-bottom: 8px;
 }
@@ -411,8 +399,8 @@ input[type='number'] {
 	font-weight: 700;
 	text-decoration: none;
 	color: #fff;
-	background: linear-gradient(135deg, #2c95f7, #1576da);
-	box-shadow: 0 6px 16px rgba(24, 135, 242, 0.35);
+	background: linear-gradient(135deg, #f58529, #dd2a7b 52%, #8134af);
+	box-shadow: 0 6px 16px rgba(221, 42, 123, 0.35);
 	transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
