@@ -78,14 +78,12 @@ const board = new Vue({
 	el: '#board'
 });
 
+const facalities = new Vue({
+	el: '#facalities'
+});
+
 const technical = new Vue({
 	el: '#technical'
 });
 
-const creatives = new Vue({
-	el: '#creatives'
-});
 
-const management = new Vue({
-	el: '#management'
-});

@@ -5,7 +5,11 @@ function removeSpaces(string) {
 	return string.split(' ').join('');
 }
 function ValidCaptcha(str2) {
-	let str1 = removeSpaces(document.getElementById('CaptchaDiv').value);
+	const captchaElement = document.getElementById('CaptchaDiv');
+	if (!captchaElement) {
+		return false;
+	}
+	let str1 = removeSpaces(captchaElement.value);
 	return str1 == str2;
 }
 
@@ -73,9 +77,12 @@ function validateForm(inputBox = undefined) {
 }
 
 $(function () {
-	let code = '';
-	for (let i = 0; i < 5; i++) code += Math.floor(Math.random() * 10);
-	document.getElementById('CaptchaDiv').value = code;
+	const captchaElement = document.getElementById('CaptchaDiv');
+	if (captchaElement) {
+		let code = '';
+		for (let i = 0; i < 5; i++) code += Math.floor(Math.random() * 10);
+		captchaElement.value = code;
+	}
 
 	// Init AOS
 	AOS.init({

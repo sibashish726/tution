@@ -15,27 +15,27 @@ const breakPosition = {
 const trendCardsDetails = [
 	{
 		backgroundCover: 'assets/Images/index/ml.jpg',
-		displayName: 'Donate to Us'
+		displayName: 'Foundation Classes'
 	},
 	{
 		backgroundCover: 'assets/Images/index/IoT1.jpg',
-		displayName: 'Helping Hands'
+		displayName: 'Expert Mentors'
 	},
 	{
 		backgroundCover: 'assets/Images/index/program.jpg',
-		displayName: 'Happy Volunteers'
+		displayName: 'Skill Workshops'
 	},
 	{
 		backgroundCover: 'assets/Images/index/cloud1.jpg',
-		displayName: 'We care about children'
+		displayName: 'Smart Classrooms'
 	},
 	{
 		backgroundCover: 'assets/Images/index/cs3.jpg',
-		displayName: 'Free food for them'
+		displayName: 'Mock Test Series'
 	},
 	{
 		backgroundCover: 'assets/Images/index/robot1.jpg',
-		displayName: 'Happy faces'
+		displayName: 'Success Stories'
 	}
 ];
 
@@ -43,29 +43,28 @@ const initiativesDetails = [
 	{
 		mainHeading: 'Teaching',
 		subHeading: 'Support',
-		description: `We provide structured teaching support for students through easy-to-understand lessons, regular practice, and doubt-clearing sessions that build strong fundamentals.`,
+		description: `We provide structured classroom teaching with concept-based lessons, chapter-wise practice, and regular revision to build strong academic fundamentals.`,
 		classFix: '',
 		svg: openSourceSvg
 	},
 	{
 		mainHeading: 'Workshops',
 		subHeading: 'Seminars',
-		description: `Interactive workshops and seminars help students explore real-world topics, ask questions freely, and learn practical skills from mentors and guest speakers.`,
+		description: `Interactive workshops and seminars help students strengthen communication, problem-solving, and exam strategy through practical learning activities.`,
 		classFix: '',
 		svg: researchWorkSvg
 	},
 	{
 		mainHeading: 'One-to-One',
 		subHeading: 'Sessions',
-		description: `Personalized one-to-one sessions help learners focus on their goals, clear doubts faster, and build confidence through guided practice and regular feedback.`,
+		description: `Personalized one-to-one mentoring helps students clear doubts faster, improve weak topics, and stay on track with focused guidance and feedback.`,
 		classFix: 'fix-touch',
 		svg: publicSpeakingSvg
 	},
 	{
 		mainHeading: 'Free materials',
 		subHeading: 'Study',
-		description: `Interpersonal skills are the skills we use every day when we communicate and
-					interact with other people, both individually and in groups.`,
+		description: `Students receive curated notes, assignments, practice sheets, and mock papers designed to improve subject mastery and exam readiness.`,
 		classFix: 'fix-touch',
 		svg: interpersonalSvg
 	}

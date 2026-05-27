@@ -268,8 +268,8 @@ const mapPositionToHtmlId = position => {
 	const mappingSet = {
 		The_Board: 'board',
 		Technical_Team: 'technical',
-		Creatives_Team: 'creatives',
-		Management_Team: 'management'
+		Creatives_Team: 'facalities',
+		Management_Team: 'facalities'
 	};
 
 	return mappingSet[position];
