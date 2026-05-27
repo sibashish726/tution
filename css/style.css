@@ -49,7 +49,7 @@ html[data-theme='dark'] {
 	--box-clr: #161620;
 	--wave1-bg: #686868;
 	--wave2-bg: #b2b2b2;
-	--bg-image: url('../assets/Images/logo/logo_for_boilerplate_2.png');
+	--bg-image: url('../assets/Images/logo/logo_for_boilerplate_1.png');
 	--logo-image: url('../assets/Images/logo/Logo2.png');
 	--box-shadow: 0 5px 16px rgba(0, 0, 0, 0.36);
 	--btn-shadow: 0 5px 18px rgba(255, 79, 139, 0.3);
@@ -60,6 +60,10 @@ html[data-theme='dark'] {
 	--navbar-toggle: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 	--btn-text: #fff;
 	--btn-hover: #f8dce7;
+}
+
+html[data-theme='dark'] .img-logo {
+	filter: brightness(1.2) contrast(1.08) drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
 }
 
 body {
@@ -2088,27 +2092,43 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 838px) {
 	.sp-container h2 {
-		font-size: 3rem;
+		font-size: 2.2rem;
 		top: 32%;
+		line-height: 1.2;
+		height: auto;
+		padding: 0 12px;
 	}
 
 	.frame-3 span {
-		font-size: 3.2rem;
+		font-size: 2.2rem;
+		line-height: 1.1;
 	}
 }
 
 @media only screen and (max-width: 504px) {
 	.sp-container h2 {
-		font-size: 2.7rem;
-		top: 30%;
+		font-size: 1.75rem;
+		top: 34%;
+		line-height: 1.2;
+		height: auto;
+		padding: 0 14px;
+		margin-top: -20px;
 	}
 
 	.frame-3 span {
-		font-size: 3rem;
+		font-size: 1.95rem;
+		line-height: 1.08;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	.sp-container h2 {
+		font-size: 1.55rem;
+		top: 35%;
 	}
 
-	.sp-container h2 {
-		margin-top: -70px;
+	.frame-3 span {
+		font-size: 1.65rem;
 	}
 }
 

@@ -18,7 +18,7 @@ const trendCardsDetails = [
 		displayName: 'Foundation Classes'
 	},
 	{
-		backgroundCover: 'assets/Images/index/IoT1.jpg',
+		backgroundCover: 'assets/Images/index/cloud1.jpg',
 		displayName: 'Expert Mentors'
 	},
 	{
