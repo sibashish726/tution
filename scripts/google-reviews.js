@@ -201,15 +201,33 @@
 		summaryElement.appendChild(summaryCard);
 	};
 
+	const avatarColors = ['#a78bfa', '#818cf8', '#c084fc', '#60a5fa', '#34d399', '#f472b6'];
+
+	const getInitials = name => {
+		const parts = name.trim().split(' ');
+		return parts.length >= 2
+			? (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
+			: name.slice(0, 2).toUpperCase();
+	};
+
 	const renderReviews = reviews => {
 		listElement.innerHTML = '';
 
-		reviews.forEach(review => {
+		reviews.forEach((review, idx) => {
 			const card = document.createElement('article');
 			card.className = 'google-review-card';
 
-			const header = document.createElement('div');
-			header.className = 'google-review-header';
+			const body = document.createElement('p');
+			body.className = 'google-review-text';
+			body.textContent = review.text || '★★★★★ Rated MindSpark 5 stars.';
+
+			const footer = document.createElement('div');
+			footer.className = 'google-review-footer';
+
+			const avatar = document.createElement('div');
+			avatar.className = 'google-review-avatar';
+			avatar.textContent = getInitials(review.author_name);
+			avatar.style.background = avatarColors[idx % avatarColors.length];
 
 			const identity = document.createElement('div');
 			identity.className = 'google-review-identity';
@@ -220,37 +238,15 @@
 
 			const sub = document.createElement('p');
 			sub.className = 'google-review-sub';
-			sub.textContent = review.review_count || '';
-
-			const dateWrap = document.createElement('p');
-			dateWrap.className = 'google-review-date';
-			dateWrap.textContent = review.relative_time_description;
+			sub.textContent = 'MindSpark Student';
 
 			identity.appendChild(name);
-			if (review.review_count) {
-				identity.appendChild(sub);
-			}
-			header.appendChild(identity);
-			header.appendChild(dateWrap);
+			identity.appendChild(sub);
+			footer.appendChild(avatar);
+			footer.appendChild(identity);
 
-			const stars = createStars(review.rating);
-
-			const body = document.createElement('p');
-			body.className = 'google-review-text';
-			body.textContent = review.text || '';
-
-			card.appendChild(header);
-			card.appendChild(stars);
-			if (review.text) {
-				card.appendChild(body);
-			}
-
-			if (review.owner_response) {
-				const ownerReply = document.createElement('div');
-				ownerReply.className = 'google-review-owner-reply';
-				ownerReply.textContent = review.owner_response;
-				card.appendChild(ownerReply);
-			}
+			card.appendChild(body);
+			card.appendChild(footer);
 
 			listElement.appendChild(card);
 		});

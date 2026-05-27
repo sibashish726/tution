@@ -2102,6 +2102,34 @@ input:checked + .slider:before {
 
 /* Hero section */
 
+.hero-wordmark {
+	position: absolute;
+	bottom: -0.08em;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 900;
+	font-size: clamp(90px, 17vw, 210px);
+	white-space: nowrap;
+	background: linear-gradient(to bottom, #1a1a2e 10%, rgba(26, 26, 46, 0) 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index: 0;
+	line-height: 1;
+	letter-spacing: -4px;
+}
+
+html[data-theme='dark'] .hero-wordmark {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.55) 10%, rgba(255, 255, 255, 0) 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
 .hero-section {
 	position: relative;
 	overflow: hidden;
