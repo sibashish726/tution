@@ -12,11 +12,7 @@
 	const summaryData = {
 		overallRating: 4.7,
 		totalRatings: 11,
-		metrics: [
-			{ label: 'Reliability', score: 4.9, accent: 'orange' },
-			{ label: 'Payout rating', score: 4.7, accent: 'teal' },
-			{ label: 'Positive solutions', score: 4.5, accent: 'teal' }
-		]
+		metrics: []
 	};
 
 	const staticReviews = [
@@ -159,43 +155,8 @@
 		scoreWrap.appendChild(score);
 		scoreWrap.appendChild(scoreMeta);
 
-		const metrics = document.createElement('div');
-		metrics.className = 'google-summary-metrics';
-
-		summaryData.metrics.forEach(item => {
-			const row = document.createElement('div');
-			row.className = 'google-metric-row';
-
-			const top = document.createElement('div');
-			top.className = 'google-metric-top';
-
-			const label = document.createElement('span');
-			label.className = 'google-metric-label';
-			label.textContent = item.label;
-
-			const value = document.createElement('span');
-			value.className = 'google-metric-value';
-			value.textContent = item.score.toFixed(1);
-
-			top.appendChild(label);
-			top.appendChild(value);
-
-			const track = document.createElement('div');
-			track.className = 'google-metric-track';
-
-			const fill = document.createElement('div');
-			fill.className = `google-metric-fill ${item.accent === 'orange' ? 'accent-orange' : 'accent-teal'}`;
-			fill.style.width = `${(item.score / 5) * 100}%`;
-
-			track.appendChild(fill);
-			row.appendChild(top);
-			row.appendChild(track);
-			metrics.appendChild(row);
-		});
-
 		summaryCard.appendChild(heading);
 		summaryCard.appendChild(scoreWrap);
-		summaryCard.appendChild(metrics);
 
 		summaryElement.innerHTML = '';
 		summaryElement.appendChild(summaryCard);
