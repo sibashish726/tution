@@ -26,7 +26,7 @@ const trendCardsDetails = [
 		displayName: 'Skill Workshops'
 	},
 	{
-		backgroundCover: 'assets/Images/index/cloud1.jpg',
+		backgroundCover: 'assets/Images/index/IOT1.jpg',
 		displayName: 'Smart Classrooms'
 	},
 	{
