@@ -32,7 +32,7 @@ body {
 .main-section {
 	padding-top: 4.5rem;
 	padding-bottom: 0;
-	background-color: var(--bg1-color);
+	background-color: transparent;
 	overflow: hidden;
 }
 

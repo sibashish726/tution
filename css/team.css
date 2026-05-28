@@ -2,7 +2,6 @@
 
 html {
 	-webkit-font-smoothing: antialiased;
-	background-color: var(--bg1-color);
 	--member-animation: all 0.35s cubic-bezier(0.14, 0.51, 0, 1);
   --details-color:rgb(236, 236, 236);
 	--neu-base: #ece6f4;
@@ -13,7 +12,6 @@ html {
 }
 
 html[data-theme='dark'] {
-	background-color: var(--bg1-color);
 	--member-animation: all 0.35s cubic-bezier(0.14, 0.51, 0, 1);
 	--details-color:#fff;
 	--neu-base: #1e1829;
@@ -29,7 +27,7 @@ section {
 }
 
 body {
-  background: var(--neu-base);
+  background: transparent;
 }
 
 .container {
@@ -121,8 +119,13 @@ h1 + p, p + p {
 }
 
 .container-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 20px;
 }
@@ -133,18 +136,21 @@ h1 + p, p + p {
 }
 
 .Card {
-  flex: 0 0 240px;
-  width: 240px;
-  border-radius: 24px;
-  background: var(--neu-base);
+  width: 260px;
+  border-radius: 28px;
   overflow: hidden;
-  box-shadow: 8px 8px 18px var(--neu-dark), -8px -8px 18px var(--neu-light);
-  transition: box-shadow 0.25s ease;
   position: relative;
+  background: var(--neu-base);
+  box-shadow: 4px 4px 10px var(--neu-dark), -4px -4px 10px var(--neu-light);
+  -webkit-transition: box-shadow 0.3s ease, -webkit-transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .card-wrap:hover .Card {
-  box-shadow: 4px 4px 10px var(--neu-dark), -4px -4px 10px var(--neu-light);
+  box-shadow: 2px 2px 6px var(--neu-dark), -2px -2px 6px var(--neu-light);
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .card-wrap:nth-child(4n + 1) .card-img-section { background-color: #5f9ea0; }
@@ -152,112 +158,47 @@ h1 + p, p + p {
 .card-wrap:nth-child(4n + 3) .card-img-section { background-color: #9575cd; }
 .card-wrap:nth-child(4n + 4) .card-img-section { background-color: #a0896e; }
 
-/* removed old nth-child card gradients */
-
 .card-img-section {
-  position: relative;
   width: 100%;
-  height: 230px;
+  height: 200px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top;
   background-size: cover;
-  background-color: #7986cb;
-}
-
-.card-img-gradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 130px;
-  background: linear-gradient(to bottom, transparent 0%, rgba(8, 6, 18, 0.72) 100%);
-  pointer-events: none;
 }
 
 .card-bottom {
-  padding: 12px 14px 14px;
+  padding: 16px 18px 18px;
   background: var(--neu-base);
 }
 
-.card-info {
-  padding: 2px 2px 8px;
-  color: #17130c;
-}
-
-.card-footer-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 8px;
-  margin-top: 8px;
-}
-
 .team-card-title {
-  position: absolute;
-  bottom: 12px;
-  left: 14px;
-  right: 14px;
-  margin: 0;
+  margin: 0 0 4px;
   font-family: 'Baloo Paaji 2', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #ffffff;
-  z-index: 1;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  color: var(--neu-text);
 }
 
 .team-card-role {
-  margin: 0;
+  margin: 0 0 14px;
   font-family: 'Quicksand', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--neu-sub);
   line-height: 1.4;
 }
 
-.team-card-tags {
+.team-card-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 5px;
-}
-
-.team-tag {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--neu-sub);
-  background: var(--neu-base);
-  border-radius: 8px;
-  padding: 3px 8px;
-  border: none;
-  box-shadow: inset 3px 3px 6px var(--neu-dark), inset -3px -3px 6px var(--neu-light);
+  gap: 8px;
 }
 
 .container-cards a {
-  text-decoration: none;
-  color: var(--neu-text);
-  font-size: 0.78rem;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-  z-index: 99;
-  background: var(--neu-base);
-  border: none;
-  border-radius: 999px;
-  padding: 5px 12px;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  text-shadow: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -267,31 +208,40 @@ h1 + p, p + p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 5px;
-  box-shadow: 4px 4px 8px var(--neu-dark), -4px -4px 8px var(--neu-light);
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: var(--neu-base);
+  color: var(--neu-text);
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  box-shadow: 2px 2px 5px var(--neu-dark), -2px -2px 5px var(--neu-light);
+  text-shadow: none;
+  -webkit-transition: box-shadow 0.2s ease;
+  -o-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 .container-cards a:hover {
+  color: var(--theme-color);
   text-decoration: none;
-  color: var(--neu-text);
-  box-shadow: inset 3px 3px 7px var(--neu-dark), inset -3px -3px 7px var(--neu-light);
+  box-shadow: inset 2px 2px 4px var(--neu-dark), inset -2px -2px 4px var(--neu-light);
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
 }
 
-a:hover .fa,
-a:hover .fab {
-  color: var(--neu-text);
+.container-cards a .fa,
+.container-cards a .fab {
+  color: inherit;
 }
 
-.team-card-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 6px;
+a:hover .fa,
+a:hover .fab {
+  color: #ffffff;
 }
 
 .team-center-heading {	

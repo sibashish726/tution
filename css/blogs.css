@@ -43,7 +43,7 @@ Blog Cards
 .all-reviews-section {
 	color: var(--font-color);
 	padding: 5rem 0 6rem;
-	background: #f5f3ff;
+	background: transparent;
 }
 
 html[data-theme='dark'] .all-reviews-section {

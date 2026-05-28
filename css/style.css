@@ -8,58 +8,62 @@ html {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-	--theme-color: #e1306c;
+	background: linear-gradient(135deg, #cebefe 0%, #f4bfda 45%, #4493f4 100%);
+	background-attachment: fixed;
+	--theme-color: #a78bfa;
 	--bg1-color: #fff7fb;
 	--font-color: #262626;
 	--bg2-color: #fff;
 	--shadow-color: #1a1a22;
 	--footer-bg: #000;
 	--footer-clr: #c4c4c4;
-	--topBtn-bg: #e1306c;
+	--topBtn-bg: #a78bfa;
 	--lgt-white: #f8f8f8;
 	--heading-clr: #1f1f2c;
-	--eventcard: 6px 10px 22px rgba(225, 48, 108, 0.25);
+	--eventcard: 6px 10px 22px rgba(167, 139, 250, 0.2);
 	--box-clr: #fff;
 	--wave1-bg: #636363;
 	--wave2-bg: #b2b2b2;
 	--bg-image: url('../assets/Images/logo/logo_for_boilerplate_1.png');
 	--logo-image: url('../assets/Images/logo/Logo1.png');
-	--box-shadow: 0 10px 24px rgba(225, 48, 108, 0.2), 0 4px 10px rgba(253, 29, 29, 0.16);
-	--btn-shadow: 0 8px 16px rgba(225, 48, 108, 0.35);
+	--box-shadow: 0 10px 24px rgba(167, 139, 250, 0.18), 0 4px 10px rgba(196, 181, 253, 0.14);
+	--btn-shadow: 0 8px 16px rgba(167, 139, 250, 0.32);
 	--nav-bar: #fff;
-	--nav-color: #e1306c;
+	--nav-color: #a78bfa;
 	--nav-clr: #262626;
-	--txt-shadow: 0px 3px 8px rgba(225, 48, 108, 0.28);
+	--txt-shadow: 0px 3px 8px rgba(167, 139, 250, 0.28);
 	--navbar-toggle: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 	--btn-text: #fff;
 	--btn-hover: none;
 }
 
 html[data-theme='dark'] {
-	--theme-color: #ff4f8b;
+	background: #0f0f14;
+	background-attachment: fixed;
+	--theme-color: #c4b5fd;
 	--bg1-color: #0f0f14;
 	--font-color: #f5f5f7;
 	--bg2-color: #181824;
 	--shadow-color: #101018;
 	--footer-bg: #000;
 	--footer-clr: #fff;
-	--topBtn-bg: #ff4f8b;
+	--topBtn-bg: #c4b5fd;
 	--heading-clr: #e4e6eb;
-	--eventcard: 0 10px 25px rgba(255, 79, 139, 0.22);
+	--eventcard: 0 10px 25px rgba(196, 181, 253, 0.2);
 	--box-clr: #161620;
 	--wave1-bg: #686868;
 	--wave2-bg: #b2b2b2;
 	--bg-image: url('../assets/Images/logo/logo_for_boilerplate_1.png');
 	--logo-image: url('../assets/Images/logo/Logo2.png');
 	--box-shadow: 0 5px 16px rgba(0, 0, 0, 0.36);
-	--btn-shadow: 0 5px 18px rgba(255, 79, 139, 0.3);
+	--btn-shadow: 0 5px 18px rgba(167, 139, 250, 0.28);
 	--nav-bar: #111118;
-	--nav-color: #ff4f8b;
+	--nav-color: #c4b5fd;
 	--nav-clr: #f5f5f7;
-	--txt-shadow: 0px 3px 8px rgba(255, 79, 139, 0.32);
+	--txt-shadow: 0px 3px 8px rgba(167, 139, 250, 0.3);
 	--navbar-toggle: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 	--btn-text: #fff;
-	--btn-hover: #f8dce7;
+	--btn-hover: #f3e8ff;
 }
 
 html[data-theme='dark'] .img-logo {
@@ -71,7 +75,7 @@ body {
 	font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	padding-top: 50px;
-	background-color: var(--bg1-color);
+	background: transparent;
 	margin: 0;
 	padding: 0;
 }
@@ -168,13 +172,13 @@ ol {
 	font-weight: 400;
 }
 .bg-lgt-grey {
-	background-color: var(--bg2-color) !important;
+	background: transparent !important;
 }
 .bg-lgt-wt {
 	background-color: var(--lgt-white);
 }
 .newsection {
-	background-color: var(--bg1-color) !important;
+	background: transparent !important;
 	padding: 1rem;
 }
 #aboutSection {
@@ -514,13 +518,7 @@ a.home {
 Parallax section
 -------------------*/
 .parallax1 {
-	background-image: url('https://www.gssoc.tech/images/0.jpg');
-	width: 100%;
-	height: 40px;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	display: none;
 }
 
 .parashadow {
@@ -1296,10 +1294,12 @@ a.fa-linkedin {
 .services-list-wrapper {
 	max-width: 1000px;
 	margin: 0 auto;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 20px;
 	overflow: hidden;
-	background: var(--bg2-color);
+	background: rgba(255, 255, 255, 0.62);
+	-webkit-backdrop-filter: blur(18px);
+	backdrop-filter: blur(18px);
 }
 
 .service-row {
@@ -1310,7 +1310,7 @@ a.fa-linkedin {
 	-ms-flex-align: center;
 	align-items: center;
 	padding: 32px 48px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 	cursor: pointer;
 	-webkit-transition: background 0.3s ease;
 	-o-transition: background 0.3s ease;
@@ -2188,10 +2188,13 @@ input:checked + .slider:before {
 	transition: all 1s;
 	border-radius: 20px;
 	cursor: pointer;
-	-webkit-box-shadow: var(--box-shadow);
-	box-shadow: var(--box-shadow);
+	-webkit-box-shadow: 0 8px 32px rgba(167, 139, 250, 0.18);
+	box-shadow: 0 8px 32px rgba(167, 139, 250, 0.18);
 	padding: 10px;
-	background-color: var(--bg2-color);
+	background: rgba(255, 255, 255, 0.62);
+	-webkit-backdrop-filter: blur(18px);
+	backdrop-filter: blur(18px);
+	border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .spacing {
@@ -2204,10 +2207,13 @@ input:checked + .slider:before {
 	transition: all 1s;
 	border-radius: 20px;
 	cursor: pointer;
-	-webkit-box-shadow: var(--box-shadow);
-	box-shadow: var(--box-shadow);
+	-webkit-box-shadow: 0 8px 32px rgba(167, 139, 250, 0.18);
+	box-shadow: 0 8px 32px rgba(167, 139, 250, 0.18);
 	padding: 15px;
-	background-color: var(--bg2-color);
+	background: rgba(255, 255, 255, 0.62);
+	-webkit-backdrop-filter: blur(18px);
+	backdrop-filter: blur(18px);
+	border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 @media only screen and (max-width: 760px) {
@@ -2257,7 +2263,7 @@ html[data-theme='dark'] .hero-wordmark {
 	align-items: flex-start;
 	justify-content: center;
 	padding: 7.8rem 0 0;
-	background: var(--bg1-color);
+	background: transparent;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
