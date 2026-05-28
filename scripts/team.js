@@ -4,11 +4,13 @@ Vue.component('Card', {
 	template: `
     <div class="card-wrap" ref="Card">
       <div class="Card">
-        <div class="card-img-section" :style="cardBgImage"></div>
-        <div class="card-bottom">
-          <h3 class="team-card-title"><slot name="header"></slot></h3>
-          <p class="team-card-role"><slot name="role"></slot></p>
-          <div class="team-card-links"><slot name="content"></slot></div>
+        <div class="card-img-section" :style="cardBgImage">
+          <a class="card-arrow-btn" href="#" aria-label="View profile">&#8599;</a>
+          <div class="card-overlay">
+            <h3 class="team-card-title"><slot name="header"></slot></h3>
+            <p class="team-card-role"><slot name="role"></slot></p>
+            <div class="team-card-links"><slot name="content"></slot></div>
+          </div>
         </div>
       </div>
     </div>`,
