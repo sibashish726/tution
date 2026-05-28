@@ -191,6 +191,23 @@ $(function () {
 	bodyElement.prepend(header);
 	bodyElement.append(footer);
 	bodyElement.append(goToTopbutton);
+
+	// Sunrise animation: reveal footer wordmark when footer scrolls into view
+	var wordmarkWrap = document.querySelector('.footer-wordmark-wrap');
+	if (wordmarkWrap && 'IntersectionObserver' in window) {
+		var wordmarkObserver = new IntersectionObserver(function(entries) {
+			entries.forEach(function(entry) {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('in-view');
+					wordmarkObserver.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.1 });
+		wordmarkObserver.observe(wordmarkWrap);
+	} else if (wordmarkWrap) {
+		wordmarkWrap.classList.add('in-view');
+	}
+
 	activeTab();
 	activeSmallTab();
 	if (sessionStorage['mode']) {

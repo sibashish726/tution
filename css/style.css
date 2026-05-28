@@ -863,6 +863,13 @@ footer {
 	text-transform: capitalize;
 	text-shadow: 0 5px 14px rgba(0, 0, 0, 0.14);
 	overflow-wrap: anywhere;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+	transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.footer-wordmark-wrap.in-view .footer-wordmark {
 	-webkit-transform: translateY(26%);
 	transform: translateY(26%);
 }
@@ -2020,6 +2027,9 @@ html[data-theme='dark'] .service-row.active {
 
 	.footer-wordmark {
 		font-size: clamp(3.2rem, 20vw, 6.2rem);
+	}
+
+	.footer-wordmark-wrap.in-view .footer-wordmark {
 		-webkit-transform: translateY(24%);
 		transform: translateY(24%);
 	}
@@ -2046,6 +2056,9 @@ html[data-theme='dark'] .service-row.active {
 	.footer-wordmark {
 		font-size: clamp(2.6rem, 18vw, 4.6rem);
 		letter-spacing: 0.01em;
+	}
+
+	.footer-wordmark-wrap.in-view .footer-wordmark {
 		-webkit-transform: translateY(22%);
 		transform: translateY(22%);
 	}
