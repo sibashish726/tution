@@ -1292,20 +1292,139 @@ a.fa-linkedin {
 	display: none;
 }
 
-/*----Feature Cards Section -------*/
-.feature-cards {
-	max-width: 1140px;
+/*----Services Accordion List-------*/
+.services-list-wrapper {
+	max-width: 1000px;
 	margin: 0 auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	overflow: hidden;
+	background: var(--bg2-color);
+}
+
+.service-row {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: space-evenly;
-	-ms-flex-pack: space-evenly;
-	justify-content: space-evenly;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin-bottom: 4rem;
+	padding: 32px 48px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	cursor: pointer;
+	-webkit-transition: background 0.3s ease;
+	-o-transition: background 0.3s ease;
+	transition: background 0.3s ease;
+}
+
+.service-row.active {
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+
+.service-row:last-child {
+	border-bottom: none;
+}
+
+.service-row.active {
+	background: #f5e0e5;
+}
+
+.service-row.active .service-num {
+	padding-top: 12px;
+}
+
+html[data-theme='dark'] .service-row.active {
+	background: rgba(225, 48, 108, 0.1);
+}
+
+.service-num {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 38%;
+	flex: 0 0 38%;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 0.82rem;
+	font-weight: 500;
+	color: #9ca3af;
+	letter-spacing: 0.5px;
+}
+
+.service-content {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.service-title {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: clamp(1.6rem, 3vw, 2.4rem);
+	font-weight: 400;
+	color: var(--heading-clr);
+	margin: 0 0 8px;
+	line-height: 1.15;
+}
+
+.service-tags {
+	font-size: 0.82rem;
+	color: #9ca3af;
+	margin: 0;
+	letter-spacing: 0.2px;
+}
+
+.service-dot {
+	margin: 0 6px;
+}
+
+.service-desc {
+	font-size: 0.88rem;
+	color: #6b7280;
+	line-height: 1.65;
+	margin: 14px 0 16px;
+	display: none;
+	max-width: 520px;
+}
+
+.service-row.active .service-desc {
+	display: block;
+}
+
+.service-cta {
+	display: none;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: var(--heading-clr);
+	border: 1px solid var(--heading-clr);
+	border-radius: 999px;
+	padding: 9px 22px;
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.service-cta:hover {
+	background: var(--heading-clr);
+	color: #fff;
+	text-decoration: none;
+}
+
+.service-row.active .service-cta {
+	display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+	.service-row {
+		padding: 20px 20px;
+	}
+
+	.service-num {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50px;
+		flex: 0 0 50px;
+	}
 }
 
 @media only screen and (max-width: 872px) {

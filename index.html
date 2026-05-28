@@ -231,21 +231,75 @@
 	</div>
 
 	<section class="newsection p-5" id="newsSection">
-		<h2 class="pt-5 pb-2 text-center fw-bold heading" style="font-family: 'Titillium Web', sans-serif; font-weight: 900;">
-			WE CREATE TRENDS <span class="clr-theme fw-100">FOR THE WORLD </span>
-		</h2>
-		<h3 class="mb-5 text-center join-us">Join us and get a chance to learn</h3>
-
-		<div class="feature-cards scroll-feature-cards" id="trends-top">
-		</div>
-
-		<div class="feature-cards scroll-feature-cards" id="trends-bottom">
+		<div class="services-list-wrapper">
+			<div class="service-row active">
+				<span class="service-num">01</span>
+				<div class="service-content">
+					<h3 class="service-title">Foundation Classes</h3>
+					<p class="service-tags">Physics <span class="service-dot">•</span> Arithmetic <span class="service-dot">•</span> Science</p>
+					<p class="service-desc">Our structured foundation classes build strong conceptual understanding through chapter-wise teaching, regular practice, and focused revision sessions designed to prepare students for board exams and beyond.</p>
+					<a href="contactUs.html" class="service-cta">ENROLL NOW</a>
+				</div>
+			</div>
+			<div class="service-row">
+				<span class="service-num">02</span>
+				<div class="service-content">
+					<h3 class="service-title">Exam Preparation</h3>
+					<p class="service-tags">JEE <span class="service-dot">•</span> NEET <span class="service-dot">•</span> Board Exams</p>
+					<p class="service-desc">Targeted coaching for competitive and board examinations with mock test series, performance analysis, and exam-focused strategies to help students achieve their best scores.</p>
+					<a href="contactUs.html" class="service-cta">ENROLL NOW</a>
+				</div>
+			</div>
+			<div class="service-row">
+				<span class="service-num">03</span>
+				<div class="service-content">
+					<h3 class="service-title">One-on-One Mentoring</h3>
+					<p class="service-tags">Doubt Clearing <span class="service-dot">•</span> Personalized <span class="service-dot">•</span> Progress Tracking</p>
+					<p class="service-desc">Personalized one-to-one sessions where students receive undivided attention, targeted doubt resolution, and customized study plans aligned with their individual pace and goals.</p>
+					<a href="contactUs.html" class="service-cta">ENROLL NOW</a>
+				</div>
+			</div>
+			<div class="service-row">
+				<span class="service-num">04</span>
+				<div class="service-content">
+					<h3 class="service-title">Skill Development</h3>
+					<p class="service-tags">Critical Thinking <span class="service-dot">•</span> Problem Solving <span class="service-dot">•</span> Time Management</p>
+					<p class="service-desc">Beyond academics, we nurture essential life skills — analytical thinking, disciplined time management, and a growth mindset that prepares students for real-world challenges.</p>
+					<a href="contactUs.html" class="service-cta">ENROLL NOW</a>
+				</div>
+			</div>
+			<div class="service-row">
+				<span class="service-num">05</span>
+				<div class="service-content">
+					<h3 class="service-title">Online Classes</h3>
+					<p class="service-tags">Live Sessions <span class="service-dot">•</span> Recorded Lectures <span class="service-dot">•</span> Digital Notes</p>
+					<p class="service-desc">Flexible online learning options let students attend live interactive sessions or revisit recorded lectures at their own pace, supported by downloadable notes and digital practice materials.</p>
+					<a href="contactUs.html" class="service-cta">ENROLL NOW</a>
+				</div>
+			</div>
+			<div class="service-row">
+				<span class="service-num">06</span>
+				<div class="service-content">
+					<h3 class="service-title">Career Counseling</h3>
+					<p class="service-tags">Goal Setting <span class="service-dot">•</span> Stream Selection <span class="service-dot">•</span> College Guidance</p>
+					<p class="service-desc">Expert guidance to help students identify the right academic stream, set career goals, and navigate college admissions — empowering informed decisions for a confident future.</p>
+					<a href="contactUs.html" class="service-cta">LEARN MORE</a>
+				</div>
+			</div>
 		</div>
 
 		<a href="contactUs.html" class="center-btn-settings btn btn-lg mt-5">Get In Touch</a>
 	</section>
 
 	<script src="./scripts/app.js"></script>
+	<script>
+		document.querySelectorAll('.service-row').forEach(function(row) {
+			row.addEventListener('click', function() {
+				document.querySelectorAll('.service-row').forEach(function(r) { r.classList.remove('active'); });
+				row.classList.add('active');
+			});
+		});
+	</script>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164715490-1"></script>
 	<script>
