@@ -8,7 +8,7 @@ html {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-	background: linear-gradient(135deg, #dbd0fa 0%, #fad0e6 45%, #0073ff 100%);
+	background: linear-gradient(135deg, #e5e0f4 30%, #f8a1ce 50%, #90bcf2 100%);
 	background-attachment: fixed;
 	--theme-color: #a78bfa;
 	--bg1-color: #fff7fb;
@@ -183,6 +183,37 @@ ol {
 }
 #aboutSection {
 	margin-top: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+#aboutSection::before {
+	content: '';
+	position: absolute;
+	inset: -15%;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='680' height='130'%3E%3Ctext x='0' y='100' font-family='Arial Black%2C Arial%2C sans-serif' font-size='92' font-weight='900' fill='rgba(30%2C0%2C60%2C0.09)' letter-spacing='-4'%3EMINDSPARK/%3C/text%3E%3C/svg%3E");
+	background-repeat: repeat;
+	background-size: 680px 130px;
+	pointer-events: none;
+	z-index: 0;
+	transform: rotate(-12deg);
+	-webkit-animation: mindspark-scroll 10s linear infinite;
+	animation: mindspark-scroll 10s linear infinite;
+}
+
+@-webkit-keyframes mindspark-scroll {
+	from { background-position: 0 0; }
+	to   { background-position: -680px 0; }
+}
+
+@keyframes mindspark-scroll {
+	from { background-position: 0 0; }
+	to   { background-position: -680px 0; }
+}
+
+#aboutSection .container.myDiv {
+	position: relative;
+	z-index: 1;
 }
 
 .fs-17px {
