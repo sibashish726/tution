@@ -8,7 +8,7 @@ html {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-	background: linear-gradient(135deg, #cebefe 0%, #f4bfda 45%, #4493f4 100%);
+	background: linear-gradient(135deg, #dbd0fa 0%, #fad0e6 45%, #0073ff 100%);
 	background-attachment: fixed;
 	--theme-color: #a78bfa;
 	--bg1-color: #fff7fb;
