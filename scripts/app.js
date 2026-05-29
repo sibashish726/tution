@@ -97,8 +97,8 @@ let footer = $(`
 			<p class="footer-p">Follow our social media for updates, stories, and community highlights.</p>
 		</div>
 		<div class="social-media" role="list" aria-label="Social media links">
-		  <a class="fa fa-twitter" href="#" aria-label="Twitter"></a>
-		  <a class="fa fa-instagram" href="#" aria-label="Instagram"></a>
+		  <a class="fa fa-facebook" href="https://www.facebook.com/people/Mindspark/61563983436358/" target="_blank" rel="noopener" aria-label="Facebook"></a>
+		  <a class="fa fa-instagram" href="https://www.instagram.com/_mind_spark__/" target="_blank" rel="noopener" aria-label="Instagram"></a>
 		  <a class="fa fa-linkedin" href="#" aria-label="LinkedIn"></a>
 		</div>
 	  </div>

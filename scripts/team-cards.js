@@ -14,50 +14,14 @@ const mapProfileLinksToFavClasses = profileName => {
 
 const teamDetails = [
 	{
-		name: 'SHIVAM KUMAR',
+		name: 'Er. Sagar Mallik',
 		position: 'The Board',
+		role: 'CEO',
+		description: 'PhD (Plug-in Hybrid Electric Vehicle) at National Institute of Technology Agartala',
 		image: 'default_member.png',
 		profiles: [
 			{
-				linkedIn: '#',
-				github: '#',
-				twitter: '#!'
-			}
-		]
-	},
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'The Board',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-				twitter: '#!'
-			}
-		]
-	},
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'The Board',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-				twitter: '#!'
-			}
-		]
-	},
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'The Board',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-				twitter: '#!'
+				linkedIn: 'https://www.linkedin.com/in/er-sagar-mallik-564564213/'
 			}
 		]
 	},
@@ -74,79 +38,62 @@ const teamDetails = [
 		]
 	},
 	{
-		name: 'SHIVAM KUMAR',
-		position: 'Creatives Team',
+		name: 'Er. Sagar Mallik',
+		position: 'Faculties Team',
+		role: 'Electrical Engineering',
+		description: 'PhD (Plug-in Hybrid Electric Vehicle) at NIT Agartala',
 		image: 'default_member.png',
 		profiles: [
 			{
-				linkedIn: '#',
-				github: '#'
+				linkedIn: 'https://www.linkedin.com/in/er-sagar-mallik-564564213/'
 			}
 		]
 	},
 	{
-		name: 'SHIVAM KUMAR',
-		position: 'Creatives Team',
+		name: 'Priyas Banik',
+		position: 'Faculties Team',
+		role: 'Mathematics',
+		description: 'B.Tech 2nd Year',
 		image: 'default_member.png',
 		profiles: [
 			{
-				linkedIn: '#',
-				github: '#'
+				linkedIn: '#'
 			}
 		]
 	},
 	{
-		name: 'SHIVAM KUMAR',
-		position: 'Creatives Team',
+		name: 'Amit Datta',
+		position: 'Faculties Team',
+		role: 'Chemistry',
+		description: 'BSc & MSc (Chemistry)',
 		image: 'default_member.png',
 		profiles: [
 			{
-				linkedIn: '#',
-				github: '#'
+				linkedIn: '#'
 			}
 		]
 	},
 	{
-		name: 'SHIVAM KUMAR',
-		position: 'Management Team',
+		name: 'Punam Das',
+		position: 'Faculties Team',
+		role: 'Electrical Engineering (B.tech and M.Tech)',
+		description: 'Ph.D Scholar at NIT Agartala',
 		image: 'default_member.png',
 		profiles: [
 			{
-				linkedIn: '#',
-				github: '#'
+				linkedIn: 'https://www.linkedin.com/in/punam-das-06bb58354/'
 			}
 		]
 	},
 	{
-		name: 'SHIVAM KUMAR',
-		position: 'Management Team',
+		name: 'Pritam Banik',
+		position: 'Faculties Team',
+		role: 'Computer Network, Software Engineer, Internet of Things',
+		description: 'B.Tech in Computer Science',
 		image: 'default_member.png',
 		profiles: [
 			{
-				linkedIn: '#',
-				github: '#'
-			}
-		]
-	},
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'Management Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#'
-			}
-		]
-	},
-	{
-		name: 'SHIVAM KUMAR',
-		position: 'Management Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#'
+				linkedIn: '#'
 			}
 		]
 	}
@@ -188,6 +135,7 @@ const mapPositionToHtmlId = position => {
 	const mappingSet = {
 		The_Board: 'board',
 		Technical_Team: 'technical',
+		Faculties_Team: 'facalities',
 		Creatives_Team: 'facalities',
 		Management_Team: 'facalities'
 	};
@@ -197,7 +145,7 @@ const mapPositionToHtmlId = position => {
 
 // Generates HTML for each team members from array
 const generateCards = cardDetail => {
-	const { name, position, image, profiles } = cardDetail;
+	const { name, position, image, profiles, role, description } = cardDetail;
 
 	const getProfilesLinksDynamic = generateProfileLinks(profiles[0]);
 	const tagsHtml = generateTagPills(profiles[0]);
@@ -205,7 +153,8 @@ const generateCards = cardDetail => {
 	const teamCard = `
   <card data-image="./assets/Images/team/${image}">
 		<span slot="header">${name}</span>
-		<span slot="role">${position}</span>
+		<span slot="role">${role || position}</span>
+		<span slot="description">${description || ''}</span>
 		<span slot="tags">${tagsHtml}</span>
 		<span slot="content">${getProfilesLinksDynamic}</span>
   </card>`;

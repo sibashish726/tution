@@ -9,6 +9,7 @@ Vue.component('Card', {
           <div class="card-overlay">
             <h3 class="team-card-title"><slot name="header"></slot></h3>
             <p class="team-card-role"><slot name="role"></slot></p>
+            <p class="team-card-desc"><slot name="description"></slot></p>
             <div class="team-card-links"><slot name="content"></slot></div>
           </div>
         </div>

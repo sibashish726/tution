@@ -280,6 +280,19 @@ h1 + p, p + p {
   text-transform: none;
 }
 
+.team-card-desc {
+  margin: 0 0 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.4;
+}
+
+.team-card-desc:empty {
+  display: none;
+}
+
 .team-card-links {
   display: none;
 }

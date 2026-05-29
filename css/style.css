@@ -8,7 +8,7 @@ html {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-	background: linear-gradient(135deg, #d9cdff 30%, #fa95c9 50%, #6caefd 100%);
+	background: linear-gradient(135deg, #d9cdff 30%, #fa95c9 50%, #579ef5 100%);
 	background-attachment: fixed;
 	--theme-color: #a78bfa;
 	--bg1-color: #fff7fb;
@@ -930,6 +930,10 @@ footer {
 	content: '\f099';
 }
 
+.social-media a.fa-facebook::before {
+	content: '\f09a';
+}
+
 .social-media a.fa-instagram::before {
 	content: '\f16d';
 }
@@ -941,6 +945,13 @@ footer {
 a.fa-instagram,
 a.fa-github {
 	color: #fff;
+}
+
+a.fa-facebook {
+	color: #ffffff;
+	background: linear-gradient(135deg, #4267B2 0%, #1877F2 55%, #0d5fcc 100%);
+	border-color: rgba(24, 119, 242, 0.7);
+	box-shadow: 0 10px 24px rgba(24, 119, 242, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 a.fa-twitter {
@@ -976,6 +987,12 @@ a.fa-linkedin {
 }
 
 .fa-linkedin:hover {
+	color: #fff;
+	background: #000;
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
+.fa-facebook:hover {
 	color: #fff;
 	background: #000;
 	border-color: rgba(255, 255, 255, 0.5);
