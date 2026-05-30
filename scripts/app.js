@@ -10,6 +10,7 @@ let header = $(`
           <a href="team.html">OUR TEAM</a>
 		  <a href="blogs.html">BLOGS</a>
 		  <a href="contactUs.html">CONTACT US</a>
+		   <a href="achievement.html">DEMO</a>
 		  <a href="contactUs.html" class="nav-cta-mobile">Get started</a>
         </div>
   </div>
@@ -23,8 +24,12 @@ let header = $(`
 		<li class="nav-item">
 		  <a class="nav-link" href="team.html"><span>OUR TEAM</span></a>
 		</li>
+		
 		  <li class="nav-item">
 			<a class="nav-link" href="blogs.html"><span>BLOGS</span></a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="achievement.html"><span>DEMO</span></a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="contactUs.html"><span>CONTACT US</span></a>
