@@ -26,6 +26,17 @@ const teamDetails = [
 		]
 	},
 	{
+		name: 'Anirban Sutradhar',
+		position: 'Technical Team',
+		role: 'Tech Lead @MinDSparK',
+		image: 'default_member.png',
+		profiles: [
+			{
+				github: 'https://github.com/sutradharanirban'
+			}
+		]
+	},
+	{
 		name: 'Sibashish Biswas',
 		position: 'Technical Team',
 		image: 'default_member.png',
