@@ -138,9 +138,11 @@ html[data-theme='dark'] .testimonials-heading h2 {
 	font-weight: 800;
 	line-height: 1.05;
 	margin-bottom: 28px;
-	background: linear-gradient(115deg, var(--ig-1) 0%, var(--ig-3) 40%, var(--ig-4) 70%, var(--ig-5) 100%);
+	background: linear-gradient(115deg, #4285f4 0%, #34a853 35%, #fbbc05 70%, #ea4335 100%);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
+	color: transparent;
 }
 
 .google-summary-score-wrap {
@@ -262,6 +264,50 @@ html[data-theme='dark'] .testimonials-heading h2 {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	gap: 20px;
+	position: relative;
+	cursor: pointer;
+	will-change: transform;
+	transform: translateZ(0);
+	transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+		box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+		background-color 0.4s ease;
+}
+
+.google-review-card::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: 16px;
+	padding: 2px;
+	background: linear-gradient(135deg, #4285f4, #34a853, #fbbc05, #ea4335);
+	-webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+	mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	pointer-events: none;
+}
+
+.google-review-card:hover {
+	transform: translateY(-10px) scale(1.04);
+	box-shadow: 0 24px 50px rgba(66, 133, 244, 0.22),
+		0 10px 24px rgba(234, 67, 53, 0.16);
+	z-index: 5;
+}
+
+.google-review-card:hover::before {
+	opacity: 1;
+}
+
+@keyframes googleReviewPop {
+	0%   { transform: translateY(0) scale(1); }
+	50%  { transform: translateY(-14px) scale(1.06); }
+	100% { transform: translateY(-10px) scale(1.04); }
+}
+
+.google-review-card:hover {
+	animation: googleReviewPop 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html[data-theme='dark'] .google-review-card {

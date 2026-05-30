@@ -131,7 +131,7 @@
 
 		const heading = document.createElement('h4');
 		heading.className = 'google-summary-heading';
-		heading.textContent = 'Reviews and ratings';
+		heading.textContent = 'Google Maps Reviews and Ratings';
 
 		const scoreWrap = document.createElement('div');
 		scoreWrap.className = 'google-summary-score-wrap';
