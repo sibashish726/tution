@@ -48,18 +48,7 @@ const teamDetails = [
 			}
 		]
 	},
-	{
-		name: 'Anirban Sutradhar',
-		position: 'Technical Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-				
-			}
-		]
-	},
+	
 	{
 		name: 'Er. Sagar Mallik',
 		position: 'Faculties Team',
