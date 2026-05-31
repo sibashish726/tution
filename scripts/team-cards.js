@@ -52,7 +52,7 @@ const teamDetails = [
 	{
 		name: 'Er. Sagar Mallik',
 		position: 'Faculties Team',
-		role: 'Electrical Engineering',
+		role: 'Electrical Engineering (B.Tech and M.Tech)',
 		description: 'PhD (Plug-in Hybrid Electric Vehicle) at NIT Agartala',
 		image: 'default_member.png',
 		profiles: [
@@ -86,7 +86,7 @@ const teamDetails = [
 		]
 	},
 	{
-		name: 'Punam Das',
+		name: 'Er. Punam Das',
 		position: 'Faculties Team',
 		role: 'Electrical Engineering (B.tech and M.Tech)',
 		description: 'Ph.D Scholar at NIT Agartala',
@@ -98,7 +98,7 @@ const teamDetails = [
 		]
 	},
 	{
-		name: 'Pritam Banik',
+		name: 'Er. Pritam Banik',
 		position: 'Faculties Team',
 		role: 'Computer Network, Software Engineer, Internet of Things',
 		description: 'B.Tech in Computer Science',
@@ -106,6 +106,30 @@ const teamDetails = [
 		profiles: [
 			{
 				linkedIn: '#'
+			}
+		]
+	},
+	{
+		name: 'Er. Diya Banik',
+		position: 'Faculties Team',
+		role: 'DBMS, DSA',
+		description: 'B.Tech in CSE',
+		image: 'default_member.png',
+		profiles: [
+			{
+				linkedIn: 'https://www.linkedin.com/in/diya-banik-4125022aa'
+			}
+		]
+	},
+	{
+		name: 'Er. Sarbari Nath',
+		position: 'Faculties Team',
+		role: 'Digital Electronics, Analog Electronics',
+		description: 'M.Tech in ECE (Micro Electronics & VLSI Design)',
+		image: 'default_member.png',
+		profiles: [
+			{
+				linkedIn: 'https://www.linkedin.com/in/sarbari-nath'
 			}
 		]
 	}
