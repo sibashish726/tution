@@ -19,7 +19,7 @@ const teamDetails = [
 		role: 'CEO',
 		description: 'PhD (Plug-in Hybrid Electric Vehicle) at National Institute of Technology Agartala',
 		experience: '9+ years',
-		image: 'sagar.jpeg',
+		image: 'SagarMallik.jpeg',
 		profiles: [
 			{
 				linkedIn: 'https://www.linkedin.com/in/er-sagar-mallik-564564213/'
@@ -57,7 +57,7 @@ const teamDetails = [
 		role: 'Electrical Engineering (B.Tech and M.Tech)',
 		description: 'PhD (Plug-in Hybrid Electric Vehicle) at NIT Agartala',
 		experience: '9+ years',
-		image: 'sagar.jpeg',
+		image: 'SagarMallik.jpeg',
 		profiles: [
 			{
 				linkedIn: 'https://www.linkedin.com/in/er-sagar-mallik-564564213/'
