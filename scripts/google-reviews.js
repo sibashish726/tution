@@ -174,43 +174,90 @@
 	const renderReviews = reviews => {
 		listElement.innerHTML = '';
 
+		const quoteText = document.getElementById('testiQuoteText');
+		const quoteAuthor = document.getElementById('testiQuoteAuthor');
+		let activeIdx = 0;
+		let autoTimer;
+
+		const ITEM_H = 90;
+		const VIEWPORT_H = 270;
+
+		const track = document.createElement('div');
+		track.className = 'testi-list-track';
+
+		const setActive = idx => {
+			activeIdx = idx;
+			const items = track.querySelectorAll('.testi-reviewer-item');
+			items.forEach((item, i) => {
+				item.classList.remove('active', 'prev', 'next');
+				if (i === idx) item.classList.add('active');
+				else if (i === idx - 1) item.classList.add('prev');
+				else if (i === idx + 1) item.classList.add('next');
+			});
+			// translate track to center active item in the viewport
+			const offset = -(idx * ITEM_H) + (VIEWPORT_H / 2) - (ITEM_H / 2);
+			track.style.transform = 'translateY(' + offset + 'px)';
+
+			const rev = reviews[idx];
+			if (quoteText) {
+				quoteText.classList.add('fade-out');
+				setTimeout(function () {
+					quoteText.textContent = rev.text || '★★★★★ Rated MindSpark 5 stars.';
+					quoteText.classList.remove('fade-out');
+				}, 280);
+			}
+			if (quoteAuthor) quoteAuthor.textContent = rev.author_name + '  ·  ' + rev.relative_time_description;
+		};
+
+		const startAuto = () => {
+			autoTimer = setInterval(function () {
+				setActive((activeIdx + 1) % reviews.length);
+			}, 3500);
+		};
+
 		reviews.forEach((review, idx) => {
-			const card = document.createElement('article');
-			card.className = 'google-review-card';
+			const item = document.createElement('div');
+			item.className = 'testi-reviewer-item';
 
-			const body = document.createElement('p');
-			body.className = 'google-review-text';
-			body.textContent = review.text || '★★★★★ Rated MindSpark 5 stars.';
-
-			const footer = document.createElement('div');
-			footer.className = 'google-review-footer';
+			const avatarWrap = document.createElement('div');
+			avatarWrap.className = 'testi-avatar-wrap';
 
 			const avatar = document.createElement('div');
-			avatar.className = 'google-review-avatar';
+			avatar.className = 'testi-reviewer-avatar';
 			avatar.textContent = getInitials(review.author_name);
 			avatar.style.background = avatarColors[idx % avatarColors.length];
 
-			const identity = document.createElement('div');
-			identity.className = 'google-review-identity';
+			avatarWrap.appendChild(avatar);
+
+			const info = document.createElement('div');
+			info.className = 'testi-reviewer-info';
 
 			const name = document.createElement('p');
-			name.className = 'google-review-name';
+			name.className = 'testi-reviewer-name';
 			name.textContent = review.author_name;
 
-			const sub = document.createElement('p');
-			sub.className = 'google-review-sub';
-			sub.textContent = 'MindSpark Student';
+			const meta = document.createElement('p');
+			meta.className = 'testi-reviewer-meta';
+			const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+			meta.textContent = stars + '  ' + review.relative_time_description;
 
-			identity.appendChild(name);
-			identity.appendChild(sub);
-			footer.appendChild(avatar);
-			footer.appendChild(identity);
+			info.appendChild(name);
+			info.appendChild(meta);
+			item.appendChild(avatarWrap);
+			item.appendChild(info);
 
-			card.appendChild(body);
-			card.appendChild(footer);
+			item.addEventListener('click', function () {
+				clearInterval(autoTimer);
+				setActive(idx);
+				startAuto();
+			});
 
-			listElement.appendChild(card);
+			track.appendChild(item);
 		});
+
+		listElement.appendChild(track);
+		setActive(0);
+		startAuto();
 	};
 
 	renderSummary();
