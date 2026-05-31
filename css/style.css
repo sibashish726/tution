@@ -3167,3 +3167,147 @@ html[data-theme='dark'] .hero-wordmark {
 	.init-main-card   { order: 2; }
 	.init-fc-faculty  { order: 3; }
 }
+
+/* =========================================================
+   PROGRAMS SECTION — card grid layout
+   ========================================================= */
+#newsSection {
+	background: #fff;
+	padding: 80px 40px 60px;
+}
+
+.prog-hero-heading {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: clamp(3.2rem, 9vw, 8rem);
+	font-weight: 900;
+	line-height: 0.95;
+	text-transform: uppercase;
+	color: #d2152d;
+	text-align: center;
+	margin-bottom: 64px;
+	letter-spacing: -0.02em;
+}
+
+.prog-hero-heading span {
+	color: #d2152d;
+}
+
+.prog-slider-outer {
+	position: relative;
+	overflow: hidden;
+	/* fade edges */
+	-webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+	mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.prog-cards-grid {
+	overflow: hidden;
+	padding-bottom: 16px;
+}
+
+.prog-track {
+	display: flex;
+	gap: 20px;
+	width: max-content;
+	-webkit-animation: prog-marquee 32s linear infinite;
+	animation: prog-marquee 32s linear infinite;
+}
+
+@-webkit-keyframes prog-marquee {
+	0%   { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+
+@keyframes prog-marquee {
+	0%   { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+
+.prog-card {
+	background: #ffffff;
+	border: 1px solid #ececec;
+	border-radius: 20px;
+	padding: 42px 36px 48px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	flex: 0 0 420px;
+	min-height: 500px;
+	transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.28s ease;
+}
+
+.prog-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 48px rgba(0,0,0,0.10);
+}
+
+.prog-card-num {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 0.72rem;
+	font-weight: 500;
+	color: #d2152d;
+	letter-spacing: 0.1em;
+}
+
+.prog-card-title {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+	font-weight: 800;
+	color: #d2152d;
+	text-transform: uppercase;
+	line-height: 1.1;
+	margin: 0;
+}
+
+.prog-card-tags {
+	font-size: 0.76rem;
+	color: #9ca3af;
+	margin: 0;
+	letter-spacing: 0.2px;
+}
+
+.prog-card-desc {
+	font-size: 0.85rem;
+	color: #555;
+	line-height: 1.65;
+	margin: 0;
+	flex: 1;
+}
+
+.prog-card-cta {
+	display: inline-block;
+	margin-top: 10px;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	color: #111;
+	text-decoration: none;
+	border-bottom: 1.5px solid #111;
+	padding-bottom: 2px;
+	width: fit-content;
+	transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.prog-card-cta:hover {
+	color: #d2152d;
+	border-color: #d2152d;
+	text-decoration: none;
+}
+
+.prog-footer-cta {
+	text-align: center;
+	margin-top: 52px;
+}
+
+@media (max-width: 560px) {
+	#newsSection {
+		padding: 50px 18px 40px;
+	}
+	.prog-card {
+		flex: 0 0 88vw;
+	}
+	.prog-hero-heading {
+		margin-bottom: 40px;
+	}
+}
