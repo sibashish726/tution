@@ -834,6 +834,55 @@ footer {
 	width: 240px;
 }
 
+.footer-links-row {
+	display: none;
+}
+
+.career-float-tab {
+	position: fixed;
+	right: -38px;
+	top: 50%;
+	-webkit-transform: translateY(-50%) rotate(90deg);
+	transform: translateY(-50%) rotate(90deg);
+	background: var(--theme-color);
+	color: #fff;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	padding: 10px 22px;
+	border-radius: 6px 6px 0 0;
+	text-decoration: none;
+	z-index: 999;
+	-webkit-transition: right 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s ease;
+	transition: right 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s ease;
+	-webkit-animation: career-tab-peek 2.5s ease 1.5s forwards;
+	animation: career-tab-peek 2.5s ease 1.5s forwards;
+	box-shadow: -3px 0 16px rgba(0,0,0,0.18);
+}
+
+.career-float-tab:hover {
+	right: -4px;
+	color: #fff;
+	text-decoration: none;
+	background: var(--theme-color);
+	opacity: 0.92;
+}
+
+@-webkit-keyframes career-tab-peek {
+	0%   { right: -38px; }
+	30%  { right: -4px; }
+	70%  { right: -4px; }
+	100% { right: -38px; }
+}
+
+@keyframes career-tab-peek {
+	0%   { right: -38px; }
+	30%  { right: -4px; }
+	70%  { right: -4px; }
+	100% { right: -38px; }
+}
+
 .footer-wordmark-wrap {
 	margin-top: 18px;
 	height: clamp(80px, 10vw, 160px);

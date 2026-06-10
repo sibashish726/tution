@@ -8,9 +8,10 @@ let header = $(`
         <div class="navigation-content" id="smallnav">
           <a class="active home" href="index.html">HOME</a>
           <a href="team.html">OUR TEAM</a>
-		  <a href="blogs.html">BLOGS</a>
+		  <a href="blogs.html">BLOGS</a>		  	  
+		  <a href="achievement.html">DEMO</a>
 		  <a href="contactUs.html">CONTACT US</a>
-		   <a href="achievement.html">DEMO</a>
+		   <a href="career.html">CAREERS</a>	
 		  <a href="contactUs.html" class="nav-cta-mobile">Get started</a>
         </div>
   </div>
@@ -25,16 +26,17 @@ let header = $(`
 		  <a class="nav-link" href="team.html"><span>OUR TEAM</span></a>
 		</li>
 		
-		  <li class="nav-item">
-			<a class="nav-link" href="blogs.html"><span>BLOGS</span></a>
+		<li class="nav-item">
+		  <a class="nav-link" href="blogs.html"><span>BLOGS</span></a>
 		</li>
 		<li class="nav-item">
 		  <a class="nav-link" href="achievement.html"><span>DEMO</span></a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="contactUs.html"><span>CONTACT US</span></a>
+		</li><li class="nav-item">
+		  <a class="nav-link" href="career.html"><span>CAREERS</span></a>
 		</li>
-
 	  </ul>
 	<div class="header-actions">
 		<a href="contactUs.html" class="nav-cta">Get started</a>
@@ -115,6 +117,7 @@ let footer = $(`
 </div>		
 </footer>
 <a onclick="topBtnClick()" class="gotopbtn clr-wt" id="topBtn"> <i class="fa fa-chevron-up clr-wt"></i> </a>
+<a href="career.html" class="career-float-tab" aria-label="Careers">CAREERS</a>
 `);
 
 let goToTopbutton = $(`#topBtn`);
@@ -215,6 +218,13 @@ $(function () {
 
 	activeTab();
 	activeSmallTab();
+
+	// Hide the careers floating tab on the career page itself
+	if (window.location.pathname.toLowerCase().includes('career.html')) {
+		var careerTab = document.querySelector('.career-float-tab');
+		if (careerTab) careerTab.style.display = 'none';
+	}
+
 	if (sessionStorage['mode']) {
 		changeTheme(sessionStorage['mode']);
 	}
