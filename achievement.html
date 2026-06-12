@@ -63,9 +63,11 @@
 
 		<section class="achv-section">
 			<div class="achv-intro">
-				<p class="achv-eyebrow">DEMO SESSIONS</p>
-				<h1 class="achv-title">Demo Sessions</h1>
-				<p class="achv-subtitle">
+			<div class="achv-eyebrow-tag">
+				<span class="career-hero-tag-dot"></span>
+				Demo Sessions
+			</div>
+			<h1 class="achv-title">Watch Us <span>Teach</span></h1>
 					Step inside a MinD SparK classroom &mdash; explore live lectures, hands-on problem solving and
 					real student moments. Watch our demo sessions to see how we teach, mentor and inspire every
 					day.
@@ -381,6 +383,40 @@
 							/* Keep default poster fallback when thumbnail is unavailable. */
 						});
 				});
+
+				// Platform badges
+				document.querySelectorAll('.achv-card').forEach(function (card) {
+					var href = card.getAttribute('href') || '';
+					var badge = document.createElement('span');
+					badge.className = 'achv-platform';
+					if (href.indexOf('facebook.com') !== -1) {
+						badge.classList.add('achv-platform--fb');
+						badge.innerHTML = '<i class="fa fa-facebook"></i>';
+					} else if (href.indexOf('instagram.com') !== -1) {
+						badge.classList.add('achv-platform--ig');
+						badge.innerHTML = '<i class="fa fa-instagram"></i>';
+					} else {
+						return;
+					}
+					var thumb = card.querySelector('.achv-thumb');
+					if (thumb) { thumb.appendChild(badge); }
+				});
+
+				// Scroll-stagger animation
+				var achvCards = document.querySelectorAll('.achv-card');
+				if ('IntersectionObserver' in window) {
+					var achvObserver = new IntersectionObserver(function (entries) {
+						entries.forEach(function (entry) {
+							if (entry.isIntersecting) {
+								entry.target.classList.add('achv-visible');
+								achvObserver.unobserve(entry.target);
+							}
+						});
+					}, { threshold: 0.08 });
+					achvCards.forEach(function (card) { achvObserver.observe(card); });
+				} else {
+					achvCards.forEach(function (card) { card.classList.add('achv-visible'); });
+				}
 			});
 		</script>
 

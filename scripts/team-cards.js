@@ -30,7 +30,7 @@ const teamDetails = [
 		name: 'Anirban Sutradhar',
 		position: 'Technical Team',
 		role: 'Tech Lead @MinDSparK',
-		experience: '2.5 years',
+		experience: '2.5+ years',
 		image: 'AnirbanSutradhar.jpeg',
 		profiles: [
 			{
@@ -68,8 +68,8 @@ const teamDetails = [
 		name: 'Priyas Banik',
 		position: 'Faculties Team',
 		role: 'Mathematics',
-		description: 'B.Tech 2nd Year',
-		experience: '1 year',
+		description: 'B.Tech in Computer Science',
+		experience: '1+ year',
 		image: 'PriyasBanik.jpeg',
 		profiles: [
 			{
@@ -95,7 +95,7 @@ const teamDetails = [
 		position: 'Faculties Team',
 		role: 'Electrical Engineering (B.tech and M.Tech)',
 		description: 'Ph.D Scholar at NIT Agartala',
-		experience: '7 years',
+		experience: '7+ years',
 		image: 'PunamDas.jpeg',
 		profiles: [
 			{
@@ -121,7 +121,7 @@ const teamDetails = [
 		position: 'Faculties Team',
 		role: 'DBMS, DSA',
 		description: 'B.Tech in CSE',
-		experience: '1 year',
+		experience: '1+ year',
 		image: 'DiyaBanik.jpeg',
 		profiles: [
 			{
@@ -133,8 +133,8 @@ const teamDetails = [
 		name: 'Er. Sarbari Nath',
 		position: 'Faculties Team',
 		role: 'Digital Electronics, Analog Electronics',
-		description: 'M.Tech in ECE (Micro Electronics & VLSI Design)',
-		experience: '4 years',
+		description: 'B.Tech & M.Tech in ECE (Micro Electronics & VLSI Design)',
+		experience: '4+ years',
 		image: 'SarbariNath.jpeg',
 		profiles: [
 			{

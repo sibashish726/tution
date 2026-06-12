@@ -555,33 +555,160 @@ html[data-theme='dark'] .career-job-card {
 
 /* ── Why Join Section ── */
 .career-why {
-	padding: 70px 6vw;
+	padding: 90px 6vw 80px;
 	background: transparent;
+	position: relative;
+	overflow: hidden;
+}
+
+.career-why::before {
+	content: '';
+	position: absolute;
+	top: -120px;
+	right: -120px;
+	width: 520px;
+	height: 520px;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(210,21,45,0.07) 0%, transparent 70%);
+	pointer-events: none;
 }
 
 .career-why-inner {
 	max-width: 1400px;
 	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+.career-why-header {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+}
+
+.career-why-tag {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	gap: 8px;
+	background: rgba(210,21,45,0.10);
+	border: 1px solid rgba(210,21,45,0.28);
+	border-radius: 50px;
+	padding: 6px 16px;
+	font-size: 0.74rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--theme-color);
+	margin-bottom: 14px;
 }
 
 .career-why-grid {
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 1fr 22px 1fr 22px 1fr 22px 1fr;
+	-ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 22px;
-	margin-top: 44px;
+	gap: 24px;
 }
 
+/* ── Why Card ── */
 .career-why-card {
-	background: rgba(255,255,255,0.62);
-	-webkit-backdrop-filter: blur(18px);
-	backdrop-filter: blur(18px);
-	border: 1px solid rgba(255,255,255,0.5);
-	border-radius: 20px;
-	padding: 28px 22px;
-	-webkit-box-shadow: 0 8px 32px rgba(210,21,45,0.18);
-	box-shadow: 0 8px 32px rgba(210,21,45,0.18);
+	position: relative;
+	overflow: hidden;
+	background: rgba(255,255,255,0.70);
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(255,255,255,0.55);
+	border-radius: 24px;
+	padding: 36px 28px 32px;
+	-webkit-box-shadow: 0 4px 24px rgba(210,21,45,0.07);
+	box-shadow: 0 4px 24px rgba(210,21,45,0.07);
+	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.34,1.56,0.64,1), -webkit-box-shadow 0.35s ease, border-color 0.3s ease, opacity 0.6s ease;
+	transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease, border-color 0.3s ease, opacity 0.6s ease;
+	/* initial hidden state for scroll animation */
+	opacity: 0;
+	-webkit-transform: translateY(48px);
+	transform: translateY(48px);
+	-webkit-transition-delay: var(--why-delay, 0s);
+	transition-delay: var(--why-delay, 0s);
+}
+
+/* stagger delays */
+.career-why-card[data-why-index="0"] { --why-delay: 0s; }
+.career-why-card[data-why-index="1"] { --why-delay: 0.12s; }
+.career-why-card[data-why-index="2"] { --why-delay: 0.24s; }
+.career-why-card[data-why-index="3"] { --why-delay: 0.36s; }
+
+/* visible state — added by IntersectionObserver */
+.career-why-card.why-visible {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+/* hover lift — reset delay so it's instant */
+.career-why-card:hover {
+	-webkit-transform: translateY(-10px) scale(1.015);
+	transform: translateY(-10px) scale(1.015);
+	-webkit-box-shadow: 0 24px 52px rgba(210,21,45,0.18);
+	box-shadow: 0 24px 52px rgba(210,21,45,0.18);
+	border-color: rgba(210,21,45,0.32);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+/* top accent bar that sweeps in on hover */
+.career-why-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 20px;
+	right: 20px;
+	height: 3px;
+	border-radius: 0 0 6px 6px;
+	background: linear-gradient(90deg, var(--theme-color), rgba(210,21,45,0.30));
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: left;
+	transform-origin: left;
+	-webkit-transition: -webkit-transform 0.4s ease;
+	transition: transform 0.4s ease;
+}
+
+.career-why-card:hover::before {
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+/* big faded number in background */
+.career-why-card-num {
+	position: absolute;
+	top: -14px;
+	right: 14px;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 6.5rem;
+	font-weight: 900;
+	line-height: 1;
+	color: rgba(210,21,45,0.055);
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+.career-why-card:hover .career-why-card-num {
+	color: rgba(210,21,45,0.12);
 }
 
 html[data-theme='dark'] .career-why-card {
@@ -589,11 +716,16 @@ html[data-theme='dark'] .career-why-card {
 	border-color: rgba(255,255,255,0.07);
 }
 
+html[data-theme='dark'] .career-why-card:hover {
+	border-color: rgba(210,21,45,0.45);
+}
+
 .career-why-icon {
-	width: 52px;
-	height: 52px;
-	border-radius: 16px;
-	background: rgba(210,21,45,0.15);
+	width: 58px;
+	height: 58px;
+	border-radius: 18px;
+	background: linear-gradient(135deg, rgba(210,21,45,0.15) 0%, rgba(210,21,45,0.06) 100%);
+	border: 1.5px solid rgba(210,21,45,0.18);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -603,25 +735,36 @@ html[data-theme='dark'] .career-why-card {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	color: var(--theme-color);
-	margin-bottom: 16px;
+	margin-bottom: 22px;
+	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.34,1.56,0.64,1), background 0.3s ease, -webkit-box-shadow 0.3s ease;
+	transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-why-card:hover .career-why-icon {
+	-webkit-transform: scale(1.18) rotate(-8deg);
+	transform: scale(1.18) rotate(-8deg);
+	background: linear-gradient(135deg, rgba(210,21,45,0.25) 0%, rgba(210,21,45,0.12) 100%);
+	-webkit-box-shadow: 0 8px 20px rgba(210,21,45,0.22);
+	box-shadow: 0 8px 20px rgba(210,21,45,0.22);
 }
 
 .career-why-title {
 	font-family: 'Titillium Web', sans-serif;
-	font-size: 1.05rem;
+	font-size: 1.1rem;
 	font-weight: 900;
 	color: var(--heading-clr);
-	margin: 0 0 8px;
+	margin: 0 0 10px;
+	letter-spacing: -0.01em;
 }
 
 .career-why-text {
-	font-size: 0.88rem;
-	line-height: 1.65;
+	font-size: 0.875rem;
+	line-height: 1.68;
 	color: var(--font-color);
 	margin: 0;
-	opacity: 0.78;
+	opacity: 0.80;
 }
 
 /* ── CTA Banner ── */
