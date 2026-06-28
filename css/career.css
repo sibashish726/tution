@@ -6,8 +6,12 @@
 /* ── Hero ── */
 .career-hero {
 padding: 110px 6vw 0;
-background: transparent;
+background: #eae9e9;
 overflow: hidden;
+}
+
+html[data-theme='dark'] .career-hero {
+background: #16103a;
 }
 
 /* ── Eyebrow bar ── */
@@ -34,70 +38,309 @@ flex-wrap: wrap;
 opacity: 0.35;
 }
 
+/* ── Headline wrap ── */
+.career-headline-wrap {
+max-width: 1300px;
+margin: 0 auto 50px;
+transform: translateX(-20%);
+}
+
+.career-headline-line2 {
+display: block;
+white-space: nowrap;
+}
+
 /* ── Giant headline ── */
 .career-big-headline {
-font-family: 'Titillium Web', sans-serif;
+font-family: 'Libre Franklin', sans-serif;
 font-size: clamp(3.4rem, 10vw, 9.5rem);
-font-weight: 900;
-line-height: 0.92;
+font-weight: 800;
+line-height: 0.95;
 letter-spacing: -0.03em;
-text-transform: uppercase;
+text-transform: none;
 color: var(--heading-clr);
-margin: 0 auto 40px;
-max-width: 1300px;
-text-align: center;
-width: 100%;
+margin: 0;
+text-align: left;
 }
 
-.career-hero-img {
-width: 100%;
-height: clamp(240px, 46vw, 600px);
--o-object-fit: cover;
-object-fit: cover;
--o-object-position: center 35%;
-object-position: center 35%;
-display: block;
-border-radius: 20px;
+/* ── Inline badge (inside h1) ── */
+.career-inline-badge {
+display: -webkit-inline-box;
+display: -ms-inline-flexbox;
+display: inline-flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+vertical-align: middle;
+gap: 8px;
+margin-left: 18px;
+background: transparent;
+
+border-radius: 100px;
+padding: 8px 20px 8px 10px;
 }
 
-.career-hero-img-caption {
+html[data-theme='dark'] .career-inline-badge {
+background: transparent;
+border-color: rgba(168,157,224,0.28);
+}
+
+.career-badge-paren {
+font-family: 'Titillium Web', sans-serif;
+font-size: clamp(3rem, 4vw, 5rem);
+font-weight: 500;
+color: var(--heading-clr);
+opacity: 0.2;
+line-height: 1;
+letter-spacing: -0.04em;
+}
+
+.career-badge-cluster {
+display: -webkit-inline-box;
+display: -ms-inline-flexbox;
+display: inline-flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+gap: 10px;
+}
+
+.career-badge-text {
+font-size: 0.72rem;
+font-weight: 400;
+line-height: 1.4;
+color: var(--font-color);
+max-width: 150px;
+white-space: normal;
+font-family: 'Libre Franklin', sans-serif;
+text-transform: none;
+letter-spacing: 0;
+}
+
+.career-badge-text strong {
+font-weight: 700;
+color: var(--heading-clr);
+}
+
+/* ── Theme-colour highlight in headline ── */
+.career-hl {
+color: #d2152d;
+}
+
+html[data-theme='dark'] .career-hl {
+color: #a89de0;
+}
+
+/* ── Badge pill (kept for reference, now replaced by inline badge) ── */
+.career-hero-badge { display: none;
+
+/* ── Overlapping avatars (shared by inline badge) ── */
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
 -webkit-box-align: center;
 -ms-flex-align: center;
 align-items: center;
-gap: 20px;
+gap: 16px;
+background: rgba(255,255,255,0.88);
+-webkit-backdrop-filter: blur(14px);
+backdrop-filter: blur(14px);
+border: 1px solid rgba(210,21,45,0.18);
+border-radius: 100px;
+padding: 12px 22px 12px 12px;
+max-width: 360px;
+-ms-flex-negative: 0;
+flex-shrink: 0;
+-webkit-box-shadow: 0 6px 24px rgba(210,21,45,0.1);
+box-shadow: 0 6px 24px rgba(210,21,45,0.1);
+align-self: flex-end;
+margin-bottom: 14px;
+}
+
+html[data-theme='dark'] .career-hero-badge {
+background: rgba(20,8,10,0.85);
+border-color: rgba(210,21,45,0.28);
+}
+
+.career-hero-badge p {
+margin: 0;
+font-size: 0.78rem;
+line-height: 1.45;
+color: var(--font-color);
+}
+
+.career-hero-badge strong {
+color: var(--heading-clr);
+font-weight: 700;
+}
+
+/* ── Overlapping avatars ── */
+.career-badge-avatars {
+display: -webkit-inline-box;
+display: -ms-inline-flexbox;
+display: inline-flex;
+-ms-flex-negative: 0;
+flex-shrink: 0;
+vertical-align: middle;
+}
+
+.career-badge-av {
+width: 34px;
+height: 34px;
+border-radius: 50%;
+border: 2.5px solid #fff;
+display: -webkit-inline-box;
+display: -ms-inline-flexbox;
+display: inline-flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+font-size: 0.75rem;
+color: #fff;
+margin-left: -9px;
+}
+
+.career-badge-av:first-child {
+margin-left: 0;
+background: -webkit-gradient(linear, left top, right bottom, from(#d2152d), to(#f05060));
+background: linear-gradient(135deg, #d2152d, #f05060);
+}
+
+.career-badge-av:nth-child(2) {
+background: -webkit-gradient(linear, left top, right bottom, from(#1f1f2c), to(#3a3a50));
+background: linear-gradient(135deg, #1f1f2c, #3a3a50);
+}
+
+.career-badge-av:nth-child(3) {
+background: -webkit-gradient(linear, left top, right bottom, from(#c8f135), to(#84cc16));
+background: linear-gradient(135deg, #c8f135, #84cc16);
+color: #1a1a1a;
+}
+
+html[data-theme='dark'] .career-badge-av {
+border-color: #2a0a0e;
+}
+
+/* ── Dark info card ── */
+.career-hero-dark-card {
+background:  #ff0022 ;
+border-radius: 26px;
+padding: 90px 60px;
+max-width: 100%;
+margin: 0;
+min-height: 280px;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
 -webkit-box-pack: justify;
 -ms-flex-pack: justify;
 justify-content: space-between;
--ms-flex-wrap: wrap;
-flex-wrap: wrap;
-padding: 16px 0 0;
-font-size: 0.78rem;
-font-weight: 600;
-letter-spacing: 0.04em;
-text-transform: uppercase;
-color: var(--font-color);
-opacity: 0.55;
-border-top: 1px solid rgba(128,128,128,0.18);
-margin-top: 14px;
+gap: 60px;
+position: relative;
+overflow: hidden;
 }
 
-.career-caption-link {
-color: var(--theme-color);
+.career-dark-card-text {
+font-family: 'Titillium Web', sans-serif;
+font-size: clamp(1rem, 2vw, 1.45rem);
+font-weight: 400;
+color: rgba(255,255,255,0.68);
+line-height: 1.6;
+margin: 0 0 0 10%;
+max-width: 640px;
+}
+
+/* ── Circular CTA button ── */
+.career-dark-card-cta {
+position: relative;
+width: 140px;
+height: 140px;
+-ms-flex-negative: 0;
+flex-shrink: 0;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
 text-decoration: none;
+color: #fff;
+-webkit-transform: translateX(-10%);
+transform: translateX(-10%);
+}
+
+.career-cta-ring-svg {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+-webkit-animation: career-cta-spin 8s linear infinite;
+animation: career-cta-spin 8s linear infinite;
+}
+
+.career-cta-ring-svg text {
+fill: rgba(255,255,255,0.6);
+font-size: 15.5px;
 font-weight: 700;
-opacity: 1;
--webkit-transition: opacity 0.2s ease;
-transition: opacity 0.2s ease;
-white-space: nowrap;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+font-family: 'Titillium Web', sans-serif;
 }
 
-.career-caption-link:hover {
-opacity: 0.75;
-text-decoration: none;
-color: var(--theme-color);
+.career-cta-icon {
+font-size: 1.4rem;
+color: #fff;
+z-index: 1;
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+-webkit-transition: -webkit-transform 0.3s ease;
+transition: transform 0.3s ease;
+}
+
+.career-dark-card-cta:hover .career-cta-icon {
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+
+@-webkit-keyframes career-cta-spin {
+from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+to   { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes career-cta-spin {
+from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+to   { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+/* ── Responsive: hero section ── */
+@media (max-width: 900px) {
+.career-inline-badge {
+display: none;
+}
+}
+
+@media (max-width: 768px) {
+.career-hero-dark-card {
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+padding: 36px 28px;
+gap: 32px;
+-webkit-box-align: start;
+-ms-flex-align: start;
+align-items: flex-start;
+border-radius: 18px;
+}
 }
 
 /* ── Hero Bottom: sub-headline + stat cards ── */
@@ -107,7 +350,7 @@ display: grid;
 -ms-grid-columns: 1fr 40px 1fr;
 grid-template-columns: 1fr 1fr;
 gap: 40px;
-padding: 60px 0 80px;
+padding: 72px 0 80px;
 -webkit-box-align: start;
 -ms-flex-align: start;
 align-items: start;
