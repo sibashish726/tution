@@ -42,7 +42,6 @@ opacity: 0.35;
 .career-headline-wrap {
 max-width: 1300px;
 margin: 0 auto 50px;
-transform: translateX(-20%);
 }
 
 .career-headline-line2 {
@@ -53,7 +52,7 @@ white-space: nowrap;
 /* ── Giant headline ── */
 .career-big-headline {
 font-family: 'Libre Franklin', sans-serif;
-font-size: clamp(3.4rem, 10vw, 9.5rem);
+font-size: clamp(2.8rem, 5.5vw, 5.8rem);
 font-weight: 800;
 line-height: 0.95;
 letter-spacing: -0.03em;
@@ -61,6 +60,7 @@ text-transform: none;
 color: var(--heading-clr);
 margin: 0;
 text-align: left;
+word-break: break-word;
 }
 
 /* ── Inline badge (inside h1) ── */
@@ -131,48 +131,14 @@ html[data-theme='dark'] .career-hl {
 color: #a89de0;
 }
 
-/* ── Badge pill (kept for reference, now replaced by inline badge) ── */
-.career-hero-badge { display: none;
+/* ── Badge pill (replaced by inline badge) ── */
+.career-hero-badge { display: none; }
 
-/* ── Overlapping avatars (shared by inline badge) ── */
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
-gap: 16px;
-background: rgba(255,255,255,0.88);
--webkit-backdrop-filter: blur(14px);
-backdrop-filter: blur(14px);
-border: 1px solid rgba(210,21,45,0.18);
-border-radius: 100px;
-padding: 12px 22px 12px 12px;
-max-width: 360px;
--ms-flex-negative: 0;
-flex-shrink: 0;
--webkit-box-shadow: 0 6px 24px rgba(210,21,45,0.1);
-box-shadow: 0 6px 24px rgba(210,21,45,0.1);
-align-self: flex-end;
-margin-bottom: 14px;
-}
+html[data-theme='dark'] .career-hero-badge { display: none; }
 
-html[data-theme='dark'] .career-hero-badge {
-background: rgba(20,8,10,0.85);
-border-color: rgba(210,21,45,0.28);
-}
+.career-hero-badge p { display: none; }
 
-.career-hero-badge p {
-margin: 0;
-font-size: 0.78rem;
-line-height: 1.45;
-color: var(--font-color);
-}
-
-.career-hero-badge strong {
-color: var(--heading-clr);
-font-weight: 700;
-}
+.career-hero-badge strong { display: none; }
 
 /* ── Overlapping avatars ── */
 .career-badge-avatars {
@@ -252,8 +218,10 @@ font-size: clamp(1rem, 2vw, 1.45rem);
 font-weight: 400;
 color: rgba(255,255,255,0.68);
 line-height: 1.6;
-margin: 0 0 0 10%;
+margin: 0;
 max-width: 640px;
+flex: 1 1 0;
+min-width: 0;
 }
 
 /* ── Circular CTA button ── */
@@ -321,21 +289,20 @@ from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
 to   { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
 
-/* ── Responsive: hero section ── */
+/* ══════════════════════════════════════════════════════
+   Responsive — Hero Section
+   ══════════════════════════════════════════════════════ */
 
-/* Large tablets — reduce the left offset */
+/* Large desktop — reduce left offset */
 @media (max-width: 1400px) {
 .career-headline-wrap {
--webkit-transform: translateX(-10%);
-transform: translateX(-10%);
+margin-left: 0;
 }
 }
 
-/* Tablets — remove offset entirely, hide badge */
+/* Tablets — hide badge, allow wrapping */
 @media (max-width: 1100px) {
 .career-headline-wrap {
--webkit-transform: none;
-transform: none;
 margin-left: 0;
 }
 .career-inline-badge {
@@ -344,31 +311,66 @@ display: none;
 .career-headline-line2 {
 white-space: normal;
 }
-}
-
-/* Phones */
-@media (max-width: 640px) {
-.career-headline-wrap {
-margin-bottom: 32px;
-}
-.career-big-headline {
-font-size: clamp(2.4rem, 11vw, 5rem);
-line-height: 1;
+.career-dark-card-cta {
+-webkit-transform: none;
+transform: none;
 }
 }
 
+/* Large phone / small tablet */
 @media (max-width: 768px) {
 .career-hero-dark-card {
 -webkit-box-orient: vertical;
 -webkit-box-direction: normal;
 -ms-flex-direction: column;
 flex-direction: column;
-padding: 36px 28px;
-gap: 32px;
+padding: 40px 24px;
+gap: 28px;
 -webkit-box-align: start;
 -ms-flex-align: start;
 align-items: flex-start;
 border-radius: 18px;
+}
+.career-dark-card-text {
+margin: 0;
+max-width: 100%;
+font-size: 1rem;
+}
+.career-dark-card-cta {
+-webkit-transform: none;
+transform: none;
+width: 110px;
+height: 110px;
+}
+}
+
+/* Phones */
+@media (max-width: 640px) {
+.career-hero {
+padding: 90px 5vw 0;
+}
+.career-headline-wrap {
+margin-bottom: 28px;
+}
+.career-big-headline {
+font-size: clamp(2rem, 10vw, 3.5rem);
+line-height: 1.05;
+}
+.career-hero-dark-card {
+padding: 32px 18px;
+gap: 24px;
+border-radius: 14px;
+}
+.career-hero-bottom {
+padding: 48px 0 60px;
+}
+}
+
+/* Medium desktop — reduce dark card padding */
+@media (max-width: 1200px) {
+.career-hero-dark-card {
+padding: 60px 40px;
+gap: 40px;
 }
 }
 
